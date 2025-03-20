@@ -1,0 +1,19 @@
+@import './../../styles.scss';
+
+.contentWrapper{
+    background: linear-gradient(to right, $gradientStart, $gradientEnd);
+    height: 100vh;
+    @include dFlex(center, center);
+    flex-direction: column;
+}
+h1,h2{
+    color: white;
+}
+h1{
+    font-size: 128px;
+    font-family: Karla;
+}
+h2{
+    font-size: 40px;
+    font-family: Fira Code;
+}

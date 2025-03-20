@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+$gradientStart:#1c1c1c ;
+$gradientEnd: #08463b;
+$hoverColor: #3DCFB6;
+
+
+
+@mixin dFlex($jc, $ai){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+body{
+    margin: 0;
+    
+}
+h1, h2, h3{
+    margin: 0;
+    color: $hoverColor;
+}
+
+button{
+    width:172px;
+    height: 48px;
+    border-radius:100px;
+    border: 1px solid white;
+    gap: 10px;
+    background-color: transparent;
+    color: white;
+    font-family: Karla;
+}
+
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/karla-v31-latin/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* fira-code-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/fira-code-v22-latin/fira-code-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }

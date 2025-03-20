@@ -1,0 +1,95 @@
+@import './../../../styles.scss';
+
+header{
+    height: 98px;
+    width:100%;
+    background:linear-gradient(to right, $gradientStart, $gradientEnd );
+    @include dFlex(center, center);
+    
+
+}
+
+.logo{
+    height: 72px;
+    width: 72px;
+}
+.navBarWrapper{
+    max-width: 1440px;
+    @include dFlex(space-between, center);
+    flex:1;
+    img{
+        padding-right: 50px;
+    }
+    .navBar{
+        padding-left: 50px;
+        gap: 24px;
+        @include dFlex(space-between, center);
+        max-width: 1440px;
+    }
+}
+
+a{
+    font-family: Fira Code;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: -3%;
+    line-height: 100%;
+    color: white;
+    z-index: 1;
+    
+    &:hover{
+        color: $hoverColor;           
+        }  
+        
+             
+    }
+    
+
+
+.language-toggle {
+    position: relative;
+    width: 84px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid $hoverColor;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+    
+    span {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      transition: background 0.3s ease-in-out;
+    }
+  
+    .de {
+      left: 0;
+      background: transparent;
+      color: rgba($hoverColor, 0.5);
+      
+    }
+  
+    .en {
+      right: 0;
+      background: transparent;
+      color: rgba($hoverColor, 0.5);
+    }
+  
+    &.active {
+      .de {
+        background: $hoverColor;
+        color: white;
+      }
+      .en {
+        background: $hoverColor;
+        color: white;
+      }
+    }
+  }
