@@ -29,6 +29,10 @@ button{
     background-color: transparent;
     color: white;
     font-family: Karla;
+    &:hover{
+        border: 2px solid $hoverColor;
+        color: $hoverColor;
+    }
 }
 
 

@@ -17,3 +17,9 @@ h2{
     font-size: 40px;
     font-family: Fira Code;
 }
+.buttonDiv{
+    @include dFlex(space-between, center);
+    button{
+        margin:40px 30px;
+    }
+}
