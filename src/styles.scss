@@ -1,6 +1,6 @@
 $gradientStart:#1c1c1c ;
 $gradientEnd: #08463b;
-$hoverColor: #3DCFB6;
+$mainColor: #3DCFB6;
 
 
 
@@ -13,11 +13,12 @@ $hoverColor: #3DCFB6;
 
 body{
     margin: 0;
+    scroll-behavior: smooth;
     
 }
 h1, h2, h3{
     margin: 0;
-    color: $hoverColor;
+    color: $mainColor;
 }
 
 button{
@@ -30,8 +31,8 @@ button{
     color: white;
     font-family: Karla;
     &:hover{
-        border: 2px solid $hoverColor;
-        color: $hoverColor;
+        border: 2px solid $mainColor;
+        color: $mainColor;
     }
 }
 

@@ -10,10 +10,12 @@ import { Component, ElementRef, ViewChild,  } from '@angular/core';
 export class HeaderComponent {
 
 
-  @ViewChild('langBtn') langBtn!: ElementRef<HTMLButtonElement>;
+  @ViewChild('langBtnDe') langBtnDe!: ElementRef<HTMLParagraphElement>;
+  @ViewChild('langBtnEn') langBtnEn!: ElementRef<HTMLParagraphElement>;
 
   toggleLanguageColor() {
-    this.langBtn.nativeElement.classList.toggle('active'); 
+    this.langBtnDe.nativeElement.classList.toggle('active'); 
+    this.langBtnEn.nativeElement.classList.toggle('active'); 
   }
 }
 

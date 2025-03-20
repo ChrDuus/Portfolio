@@ -1,93 +1,114 @@
-@import './../../../styles.scss';
+@import "./../../../styles.scss";
 
-header{
-    height: 98px;
-    width:100%;
-    background:linear-gradient(to right, $gradientStart, $gradientEnd );
-    @include dFlex(center, center);
-    
-
+header {
+  height: 98px;
+  width: 100%;
+  background: linear-gradient(to right, $gradientStart, $gradientEnd);
+  @include dFlex(center, center);
 }
 
-.logo{
-    height: 72px;
-    width: 72px;
+.logo {
+  height: 72px;
+  width: 72px;
 }
-.navBarWrapper{
-    max-width: 1440px;
+.navBarWrapper {
+  max-width: 1440px;
+  @include dFlex(space-between, center);
+  flex: 1;
+
+  img {
+    padding-right: 50px;
+  }
+
+  .navBar {
+    padding-left: 50px;
+    gap: 24px;
     @include dFlex(space-between, center);
-    flex:1;
-    img{
-        padding-right: 50px;
-    }
-    .navBar{
-        padding-left: 50px;
-        gap: 24px;
-        @include dFlex(space-between, center);
-        max-width: 1440px;
-    }
+    max-width: 1440px;
+  }
 }
 
-a{
-    font-family: Fira Code;
-    text-decoration: none;
-    font-size: 18px;   
-    color: white;
-    
-    
-    &:hover{
-        color: $hoverColor;           
-        }  
-        
-             
-    }
-    
+a {
+  font-family: Fira Code;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  position: relative;
 
+  &::after {
+    content: "•";
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%) scale(0);
+    font-size: 28px;
+    color: $mainColor;
+    transition: transform 0.2s ease-in-out;
+  }
 
-.language-toggle {
-    position: relative;
-    width: 84px;
-    height: 28px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 2px solid $hoverColor;
-    background: none;
-    cursor: pointer;
-    overflow: hidden;
-    transition: background 0.3s ease-in-out;
-    
-    span {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      transition: background 0.3s ease-in-out;
-    }
-  
-    .de {
-      left: 0;
-      background: transparent;
-      color: rgba($hoverColor, 0.5);
-      
-    }
-  
-    .en {
-      right: 0;
-      background: transparent;
-      color: rgba($hoverColor, 0.5);
-    }
-  
-    &.active {
-      .de {
-        background: $hoverColor;
-        color: white;
-      }
-      .en {
-        background: $hoverColor;
-        color: white;
-      }
+  &:hover {
+    color: $mainColor;
+
+    &::after {
+      transform: translateX(-50%) scale(1);
     }
   }
+}
+
+.language-toggle {
+  position: relative;
+  width: 84px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid $mainColor;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &:hover {
+    border: 1px solid white;
+  }
+
+  span {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .de {
+    left: 0;
+    background: transparent;
+    border-radius: 100px;   
+    color: rgba($mainColor, 0.5);
+    border:none;
+
+    &.active{
+      background: $mainColor;
+      color: white;
+    }
+  }
+
+   .en {
+    right: 0;
+    margin-right:-2px;
+    background: transparent;
+    border-radius: 100px;
+    border: none;
+    border-collapse: collapse;
+    color: rgba($mainColor, 0.5);
+
+    &.active {
+      background: $mainColor;
+      color: white;
+     }
+  }
+}
+
+// border am language button fixen (1px rand)
