@@ -10,7 +10,9 @@ $mainColor: #3DCFB6;
     align-items: $ai;
 }
 
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     scroll-behavior: smooth;
@@ -52,4 +54,28 @@ button{
     font-style: normal;
     font-weight: 400;
     src: url('assets/fonts/fira-code-v22-latin/fira-code-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1C1C1C; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #08463B 0%, #1C1C1C 100%);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  
+    &:hover {
+      background: linear-gradient(180deg, #1C1C1C 0%, #08463B 100%);
+    }
+  }  
+  
+  * {
+    scrollbar-color: #08463B #1C1C1C;
+    scrollbar-width: thin;
   }
