@@ -2,8 +2,14 @@
 
 .aboutMeSection{
     background: $gradientStart;
-    height: 100vh;
+    height: 900px;
     @include dFlex(center, center);
+        .contentWrapper{
+            max-width: 1440px;
+            width: 100%;
+            gap: 60px;
+            @include dFlex(space-between, center);
+        }
         .imgDiv{
             height: 100px;
             width: 100px;

@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<section class="skillsSection">
+  <div class="contentWrapper">
+    <div class="skillSet">
+      <h3 class="overContent">Technologies</h3>     
+      <div class="textDiv">
+        <h2>Skill Set</h2>
+        <span class="skillIntroduction">Introduce Skills here</span>
+        <h3>You need <span>another Skill?</span></h3>
+        <span>Feel free</span>
+      </div>
+      <button>Let's talk</button>
+    </div>
+    <div class="skillButtons">
+      @for (item of imgURLS; track $index) {
+      <img src="{{ imgURLS[$index] }}" alt="" />
+      }
+    </div>
+  </div>
+</section>
