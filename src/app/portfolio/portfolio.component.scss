@@ -1,0 +1,81 @@
+@import "./../../styles.scss";
+
+
+section{
+    background-color: $gradientStart;
+    @include dFlex(center, flex-start);
+    flex-direction: column;
+    
+   
+}
+
+.contentWrapper{
+    @include dFlex(center, flex-start);
+    flex-direction: column;
+    max-width: 1440px;
+    flex:1;
+    width: 100%;
+    .text{
+        text-align: left;
+        border-bottom: $mainColor 1px solid;
+        width: 100%;
+    >h2{
+        @include text('Fira Code', 64px, $mainColor, 700 );
+        padding-bottom: 30px;
+    }
+    >h3{
+        @include text('Karla', 24px, $mainColor, 400); 
+        margin-bottom: 20px;
+             
+    }    
+    >p{
+        @include text('Karla', 18px, white, 400);
+        line-height: 120%;
+        margin-bottom: 30px;
+        max-width: 456px;
+        
+    }
+}
+}
+.projectWrapper{
+    max-width: 1440px;
+    width: 100%;
+   
+.project{
+    border-bottom: $mainColor 1px solid;
+    
+    @include dFlex(space-between, center);
+    padding: 40px 32px;
+    width: 100%;
+    transition: background-color 0.2s ease-in;
+    &:hover{       
+        background-color: rgba($mainColor, 0.3);        
+    }
+    >h3{
+        @include text('Fire Code', 24px, white, 700);
+        line-height: 120%;
+    }
+    
+    >.technologies{
+        display:flex;
+        gap: 4px;
+        >span{
+            @include text('Karla', 18px, white, 400);
+            line-height: 120%;
+        }
+        .borderRight{
+            background-color: $mainColor;
+            width: 2px;
+            height: 22px;
+            }
+
+        }
+    }
+    .preview{
+        >img{
+            width: 296px;
+            height: 192px;
+            border-radius: 16px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <section class="skillsSection">
   <div class="contentWrapper">
     <div class="skillSet">
-      <h3 class="overContent">Technologies</h3>     
+      <h3 class="overContent">Technologies</h3>
       <div class="textDiv">
         <h2>Skill Set</h2>
         <span class="skillIntroduction">Introduce Skills here</span>
@@ -10,9 +10,29 @@
       </div>
       <button>Let's talk</button>
     </div>
+
     <div class="skillButtons">
       @for (item of imgURLS; track $index) {
-      <img src="{{ imgURLS[$index] }}" alt="" />
+      <div class="skillDiv">
+        <img src="{{ item.url }}" alt="" />
+        <p>{{ item.name }}</p>
+
+        @if ($index == imgURLS.length - 1) {
+        <div class="tooltip">
+          <span>I have special<br> interests in learning</span>
+          <div>
+            <div>
+              <img src="../../assets/img/skills/react.svg" alt="" />
+              <p>React</p>
+            </div>
+            <div>
+              <img src="../../assets/img/skills/vuejs.svg" alt="" />
+              <p>Vue.js</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
       }
     </div>
   </div>

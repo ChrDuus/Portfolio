@@ -1,74 +1,137 @@
 @import "./../../styles.scss";
 
-.skillsSection{
+.skillsSection {
+    @include dFlex(center, center);
     height: 700px;   
     background: radial-gradient(
-    circle at 0% 60%,  
-    $gradientEnd 0%,   
-    $gradientStart 25%
-);
+        circle at 0% 60%,  
+        $gradientEnd 0%,   
+        $gradientStart 25%
+    );
+}
+
+.contentWrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    @include dFlex(center, center);
+    margin: 0 40px;
+    gap: 96px;
+}
+
+.skillSet {
+    flex: 1;
+    background: rgba($gradientEnd, 0.9);
+    border-radius: 30px;
+    border: 1px solid $mainColor;
+
+    .overContent {
+        position: relative;
+        top: -40px;
+        @include text('Karla', 24px, $mainColor, 700);       
     }
 
-    .contentWrapper{
-        height:100%;
-        max-width: 1440px;
-        @include dFlex(center, center);
-        margin: 0 40px;
-        
-    }
-    .skillSet{
-        
-        flex:1;
-        background: rgba($gradientEnd, 0.9);
-        border-radius: 30px;
-        border: 1px solid $mainColor;
-        .overContent{
-            position: relative;
-            top: -40px;
-            font-size: 24px;
-            font-family: 'Karla';
-            font-weight: 700;
-        }
-        button{
-           margin: 20px 0 20px 40px;
-        }
-        .textDiv{
-            padding-left: 40px;
-            h2{
-                font-family: 'Fir Code';
-                font-size: 64px;
-                font-weight: 700;
-                }
-                h3{
-                    font-family:'Fira Code';
-                    font-size: 24px;
-                    font-weight: 700;
-                    color: white;
-                    span{
-                        color: $mainColor;
-                        font-size: 24px;
-                        font-weight: 700;
-                        font-family: 'Fira Code';
-                    }
-                }
-                span{
-                    font-family: 'Karla';
-                    font-size: 16px;
-                    color: white;
-                }
-                .skillIntroduction{
-                    font-size: 18px;
-                }
-        }
-    }
-    .skillButtons{
-        flex-wrap: wrap;
-        @include dFlex(space-between, center);
-        flex:1;
-        img{
-            height:auto;
-            width: 104px;
-            margin: 10px 20px;
-        }
+    button {
+        margin: 20px 0 20px 40px;
     }
 
+    .textDiv {
+        padding-left: 40px;
+
+        h2 {
+            @include text('Fira Code', 64px, $mainColor, 700);            
+        }
+
+        h3 {
+            @include text('Fira Code', 24px, white, 700);            
+
+            span {                
+                @include text('Fira Code', 24px, $mainColor, 700);                
+            }
+        }
+
+        span {
+            @include text('Karla', 16px, white, 400);             
+        }
+
+        .skillIntroduction {
+            font-size: 18px;
+        }
+    }
+}
+
+.skillButtons {
+    flex-wrap: wrap;
+    width: 632px;
+    gap: 72px;
+    @include dFlex(space-between, center);
+    flex: 1;
+
+    .skillDiv {
+        width: 108px;
+        height: 144px;
+        @include dFlex(0, center);
+        flex-direction: column;
+        text-align: center;
+        @include text('Fira Code', 18px, white, 400);         
+        position: relative;  
+
+        > p {
+            white-space: normal;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        .tooltip {
+            @include dFlex(center, center);
+            flex-direction: column;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: black;
+            padding: 8px 12px;
+            font-size: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease-in-out, transform 0.2s;
+            >span{
+                color: $mainColor;
+            }
+            >div{
+                padding-top: 10px;
+                color: $mainColor;
+                @include dFlex(center, center);
+            }
+            // Das kleine Dreieck unten
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 8px;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+              }
+            }       
+        
+        &:last-of-type:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-5px);
+        }
+    }
+}

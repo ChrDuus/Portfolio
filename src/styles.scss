@@ -1,4 +1,4 @@
-$gradientStart:#1c1c1c ;
+$gradientStart:#292929 ;
 $gradientEnd: #08463b;
 $mainColor: #3DCFB6;
 
@@ -8,6 +8,12 @@ $mainColor: #3DCFB6;
     display: flex;
     justify-content: $jc;
     align-items: $ai;
+}
+@mixin text($family, $size, $color, $weight){
+  font-family:$family;
+  font-size: $size ;
+  color: $color;
+  font-weight: $weight;
 }
 
 *{

@@ -8,17 +8,15 @@ header {
 }
 
 .logo {
-  height: 72px;
-  width: 72px;
+  height: auto;
+  width: 256px;
 }
 .navBarWrapper {
   max-width: 1440px;
   @include dFlex(space-between, center);
   flex: 1;
 
-  img {
-    padding-right: 50px;
-  }
+ 
 
   .navBar {
     padding-left: 50px;

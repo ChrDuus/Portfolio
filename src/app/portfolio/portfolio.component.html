@@ -1,1 +1,33 @@
-<p>portfolio works!</p>
+<section>
+  <div class="contentWrapper">
+    <div class="text">
+      <h3>Portfolio</h3>
+      <h2>Featured Pojects</h2>
+      <p
+        >Explore a selection of my work here - Interact with projects to see my
+        skills in action</p
+      >
+    </div>
+    <div class="projectWrapper">
+      <div class="projects">
+        @for (project of projects; track $index) {
+        <div class="project">
+          <h3>{{ project.name }}</h3>
+          <div class="technologies">
+            @for (technologie of project.technologies; track $index) {
+            <span> {{ technologie }}</span>
+            @if($index < project.technologies.length-1){
+            <div class="borderRight"></div>
+            } }
+          </div>
+          <div class="preview">
+            <img src='{{project.previewImg}}' alt="">
+        </div>
+        </div>
+        
+        }
+      </div>
+     
+    </div>
+  </div>
+</section>
