@@ -13,7 +13,8 @@ export class PortfolioComponent {
       name: 'Pokedex',
        technologies: [
         'HTML', 'CSS', 'JavaScript'
-      ] 
+      ] ,
+      previewImg: '../../assets/img/previews/el_pollo_loco.jpg'
     },
     {name: 'El Pollo Loco',
       technologies: ['HTML', 'CSS', 'JavaScript'
@@ -21,4 +22,15 @@ export class PortfolioComponent {
       previewImg: '../../assets/img/previews/el_pollo_loco.jpg'
     }
   ];
+
+  activePreview: string = '';
+
+onHover(project: any) {
+  this.activePreview = project.previewImg;
+}
+
+onLeave() {
+  this.activePreview = '';
+}
+
 }

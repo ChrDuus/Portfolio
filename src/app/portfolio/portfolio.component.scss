@@ -18,7 +18,7 @@ section{
     .text{
         text-align: left;
         border-bottom: $mainColor 1px solid;
-        width: 100%;
+        width: 80%;
     >h2{
         @include text('Fira Code', 64px, $mainColor, 700 );
         padding-bottom: 30px;
@@ -40,13 +40,15 @@ section{
 .projectWrapper{
     max-width: 1440px;
     width: 100%;
+    position: relative;
    
 .project{
     border-bottom: $mainColor 1px solid;
     
     @include dFlex(space-between, center);
     padding: 40px 32px;
-    width: 100%;
+    width: 80%;
+    height: 100px;
     transition: background-color 0.2s ease-in;
     &:hover{       
         background-color: rgba($mainColor, 0.3);        
@@ -54,14 +56,17 @@ section{
     >h3{
         @include text('Fire Code', 24px, white, 700);
         line-height: 120%;
+        flex:1;
     }
     
     >.technologies{
         display:flex;
         gap: 4px;
+        flex:1;
         >span{
             @include text('Karla', 18px, white, 400);
             line-height: 120%;
+            
         }
         .borderRight{
             background-color: $mainColor;
@@ -71,11 +76,24 @@ section{
 
         }
     }
-    .preview{
-        >img{
-            width: 296px;
-            height: 192px;
-            border-radius: 16px;
+    .preview {
+        position: absolute;
+        width: 296px;
+        height: 192px;
+        border-radius: 16px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 8px;
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+    
+      @if (activePreview) {
+        .preview {
+          opacity: 1;
+          transform: scale(1);
         }
-    }
+      
+      }
+      
 }
