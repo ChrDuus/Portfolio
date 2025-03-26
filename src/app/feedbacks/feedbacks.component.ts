@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './feedbacks.component.scss'
 })
 export class FeedbacksComponent {
-
+feedbacks :{name: string; feedback: string, ref: string}[]= 
+[
+{
+  name: 'test',
+  feedback: 'doppelter test',
+  ref: 'Boss'
+}
+]
 }

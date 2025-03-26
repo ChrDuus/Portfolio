@@ -38,29 +38,55 @@ section{
 }
 }
 .projectWrapper{
-    max-width: 1440px;
-    width: 100%;
     position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+
+  .projects{
+    flex: 1;
+    width: 60%; 
+  }
    
-.project{
+  .project {
     border-bottom: $mainColor 1px solid;
-    
     @include dFlex(space-between, center);
     padding: 40px 32px;
     width: 80%;
     height: 100px;
     transition: background-color 0.2s ease-in;
-    &:hover{       
-        background-color: rgba($mainColor, 0.3);        
+
+    &:hover {
+        background-color: rgba($mainColor, 0.3);
     }
-    >h3{
+
+    > h3 {
         @include text('Fire Code', 24px, white, 700);
         line-height: 120%;
-        flex:1;
+        flex: 1;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+
+        &::after {
+            content: "↗";
+            position: absolute;
+            right: 200px;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+    }
+
+    &:hover > h3::after {
+        opacity: 1;
+        transform: translateX(0);
     }
     
+    
     >.technologies{
-        display:flex;
+        @include dFlex(end, center);
         gap: 4px;
         flex:1;
         >span{
@@ -78,22 +104,64 @@ section{
     }
     .preview {
         position: absolute;
-        width: 296px;
-        height: 192px;
+        width: 350px;
+        height: 200px;
+        
+        right: 0;
+        background:$gradientStart;
         border-radius: 16px;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 8px;
-        opacity: 0;
-        transform: scale(0.95);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-      }
-    
-      @if (activePreview) {
-        .preview {
-          opacity: 1;
-          transform: scale(1);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transform: translateX(150px);
+        
+        transition: opacity 0.8s ease-in, transform 0.3s ease-in;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 108%;
+            height: 108%;
+            top: 5px;
+            left: 5px;
+            border-radius: 16px;
+            background: repeating-linear-gradient(
+                135deg,
+                rgba($mainColor, 0.8) 0px,
+                rgba($gradientStart, 0.8) 1px,
+                transparent 4px,
+                transparent 8px
+            );
+            ;
+            z-index: -1; // Hinter das Bild legen
         }
+    
+       .lineDiv {
+        z-index: 0;
+          content: "";
+          position: relative;
+          top: -120px;          
+          
+          background: repeating-linear-gradient(135deg, #3DCFB6 0px, #3DCFB6 2px, transparent 2px, transparent 20px);
+          
+          border-radius: 16px;
+        }
+        > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            z-index: 1;
+          }
+    
+          @if (activePreview) {
+            .preview {
+              opacity: 1;
+              transform: translateX(0);
+            }
       
       }
       
+    }
 }

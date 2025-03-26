@@ -1,1 +1,14 @@
-<p>feedbacks works!</p>
+<section>
+<h2>What my collegues say about me</h2>
+<div class="feedbackArea">
+@for (comment of feedbacks; track $index) {
+    <div class="singleFeedback">
+        <span>{{comment.feedback}}</span>
+        <div class="feedbackBottom">
+            <div class="lineDiv"></div>
+            <span>{{comment.name}} - {{comment.ref}}</span>
+        </div>
+    </div>
+}
+</div>
+</section>

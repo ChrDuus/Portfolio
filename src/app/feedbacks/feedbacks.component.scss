@@ -1,0 +1,35 @@
+@import "./../../styles.scss";
+section{
+    background-color: $gradientStart;
+    text-align: center;
+    
+    >h2{        
+        @include text('Fira Code', 32px, $mainColor, 700 );
+        margin-bottom: 50px;
+         padding-top: 144px;
+        
+    }
+    .singleFeedback{
+        @include dFlex(center, center);
+        flex-direction: column;
+        background-color: rgba($mainColor, 0.5);
+        border: 1px solid $mainColor;
+        border-radius:32px;
+        >span{
+            @include text('Karla', 20px, white, 400);
+        }
+    }
+    .feedbackBottom{
+        @include dFlex(center, center);
+        gap: 50px;
+        >span{
+            @include text('Karla', 18px, white, 400);
+        }
+        .lineDiv{
+            background-color: white;
+            height: 1px;
+            width: 150px;
+            
+        }
+    }
+}

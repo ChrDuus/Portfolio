@@ -11,8 +11,8 @@
     <div class="projectWrapper">
       <div class="projects">
         @for (project of projects; track $index) {
-          <div class="project" (mouseenter)="onHover($event)" (mouseleave)="onLeave()">
-          <h3>{{ project.name }}</h3>
+        <div class="project" (mouseenter)="onHover($event, project)" (mouseleave)="onLeave()">
+          <h3 >{{ project.name }} </h3>
           <div class="technologies">
             @for (technologie of project.technologies; track $index) {
             <span> {{ technologie }}</span>
@@ -20,15 +20,16 @@
             <div class="borderRight"></div>
             } }
           </div>
-          
         </div>
         }
-        @if (activePreview) {
-          <div class="preview">
-            <img [src]="activePreview" alt="Project Preview" />
-          </div>
-        }
       </div>
+    
+      @if (activePreview) {
+        <div class="preview" [style.top]="previewPosition.top" [style.right]="previewPosition.right">
+          <img [src]="activePreview" alt="Project Preview" />
+          <div class="lineDiv"></div>
+        </div>
+      }
     </div>
   </div>
 </section>
