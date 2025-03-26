@@ -12,7 +12,7 @@ section{
     .singleFeedback{
         @include dFlex(center, center);
         flex-direction: column;
-        background-color: rgba($mainColor, 0.5);
+        background-color: rgba($mainColor, 0.3);
         border: 1px solid $mainColor;
         border-radius:32px;
         >span{
@@ -21,7 +21,7 @@ section{
     }
     .feedbackBottom{
         @include dFlex(center, center);
-        gap: 50px;
+        gap: 35px;
         >span{
             @include text('Karla', 18px, white, 400);
         }
