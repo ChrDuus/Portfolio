@@ -71,8 +71,9 @@ shiftCards(direction: string) {
     this.currentOffset= -210
   }
   feedbackCards.forEach((card: any, index:number) => {
-    const isActive = index === this.middleIndex;
+    let isActive:boolean = index === this.middleIndex;
     card.style.transform = `translateX(${this.currentOffset}%) scale(${isActive ? 1.1 : 0.8})` ;
+    
   });
 }
 
