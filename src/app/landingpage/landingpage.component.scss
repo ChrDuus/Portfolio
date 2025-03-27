@@ -35,7 +35,7 @@
   gap: 30px;
   position: absolute;
   bottom: 0;
-  left: 8%;
+  left: 40px;
     .arrowDown{
       @include dFlex(center, center);
       transform: rotate(90deg);
@@ -60,7 +60,7 @@
   gap: 25px;
   position: absolute;
   bottom: 0;
-  right: 8%;
+  right: 40px;
   .emailLandingpage{
     color: white;
     font-family: Karla;
@@ -111,6 +111,8 @@ p {
     align-items: center;
     gap: 56px;      
     width: max-content;
+    animation: scroll2ndText 20s linear infinite; 
+    
   }
 
   
@@ -118,7 +120,7 @@ p {
     @include dFlex(center, center);    
     gap: 56px;
     color: $mainColor;    
-    animation: scrollText 20s linear infinite;
+    // animation: scrollText 10s linear infinite;
     
   }
 
@@ -126,7 +128,7 @@ p {
     @include dFlex(center, center);   
     gap: 56px;
     color: $mainColor;    
-    animation: scroll2ndText 20s linear infinite;   
+      
   }
  
 
@@ -136,7 +138,7 @@ p {
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%); 
+      transform: translateX(-25%); 
     }
   }
   @keyframes scroll2ndText {
@@ -144,6 +146,6 @@ p {
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%); 
+      transform: translateX(-34%); 
     }
   }

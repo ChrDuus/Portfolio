@@ -3,6 +3,7 @@
 .skillsSection {
     @include dFlex(center, center);
     height: 700px;   
+    width: 100%;
     background: radial-gradient(
         circle at 0% 50%,  
         $gradientEnd 0%,   

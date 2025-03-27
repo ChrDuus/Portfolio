@@ -1,14 +1,27 @@
 <section>
-<h2>What my collegues say about me</h2>
-<div class="feedbackArea">
-@for (comment of feedbacks; track $index) {
-    <div class="singleFeedback">
-        <span>{{comment.feedback}}</span>
-        <div class="feedbackBottom">
-            <div class="lineDiv"></div>
-            <span>{{comment.name}} - {{comment.ref}}</span>
-        </div>
+    <h2>What my colleagues say about me</h2>
+    <div class="slider-container">
+      <div class="feedback-wrapper">
+        @for (comment of feedbacks; track $index) {
+          <div class="feedback-card {{$index}}"
+               [class.active]="$index === middleIndex"
+              >
+            <p>{{ comment.feedback }}</p>
+            <div class="feedbackBottom">
+              <div class="lineDiv"></div>
+              <span>{{ comment.name }} - {{ comment.ref }}</span>
+            </div>
+          </div>
+        }
+      </div>
+  
+      <div class="dots">
+        <button class="nav-btn left-btn" (click)="slideRight()">&#10094;</button>
+        @for (_ of feedbacks; track $index) {
+          <span [class.active]="$index === middleIndex"></span>
+        }
+        <button class="nav-btn right-btn" (click)="slideLeft()">&#10095;</button>
+      </div>
     </div>
-}
-</div>
-</section>
+  </section>
+  
