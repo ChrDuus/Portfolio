@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingleProjectComponent } from './single-project.component';
+import { OverlayComponent } from './overlay.component';
 
-describe('SingleProjectComponent', () => {
-  let component: SingleProjectComponent;
-  let fixture: ComponentFixture<SingleProjectComponent>;
+describe('OverlayComponent', () => {
+  let component: OverlayComponent;
+  let fixture: ComponentFixture<OverlayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SingleProjectComponent]
+      imports: [OverlayComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SingleProjectComponent);
+    fixture = TestBed.createComponent(OverlayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

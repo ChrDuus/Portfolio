@@ -135,7 +135,7 @@ section{
                 transparent 8px
             );
             ;
-            z-index: -1; // Hinter das Bild legen
+            z-index: -1;
         }
     
        .lineDiv {
@@ -165,4 +165,7 @@ section{
       }
       
     }
+}
+app-overlay{
+    width: 100%;
 }

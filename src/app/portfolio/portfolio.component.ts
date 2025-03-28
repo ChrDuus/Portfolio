@@ -1,35 +1,40 @@
 import { asNativeElements, Component, ViewChild, ElementRef } from '@angular/core';
+import { Projects } from '../interfaces/projects';
+import { OverlayComponent } from './overlay/overlay.component';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [OverlayComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
  
-  projects =  [
+  projects: Projects[] =  [
     { 
       name: 'Pokedex',
        technologies: [
         'HTML', 'CSS', 'JavaScript'
       ] ,
-      previewImg: '../../assets/img/previews/el_pollo_loco.jpg'
+      previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
+      description:'kommt noch'
     },
     {name: 'El Pollo Loco',
       technologies: ['HTML', 'CSS', 'JavaScript'
       ],
-      previewImg: '../../assets/img/previews/el_pollo_loco.jpg'
+      previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
+      description:'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
     },
     {name: 'El Pollo Loco',
       technologies: ['HTML', 'CSS', 'JavaScript'
       ],
-      previewImg: '../../assets/img/previews/el_pollo_loco.jpg'
+      previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
+      description:'aber nicht heute'
     }
   ];
 
-  activePreview: string = '';
+activePreview: string = '';
 previewPosition = { top: '0px', right: '0px' };
 
 onHover(event: MouseEvent, project: any) {  
@@ -43,10 +48,9 @@ onHover(event: MouseEvent, project: any) {
     const targetRect = target.getBoundingClientRect();
     const wrapperRect = wrapper.getBoundingClientRect();
 
-    // Position berechnen: Rechtsbündig und auf gleicher Höhe wie das Projekt
     this.previewPosition = {
       top: `${targetRect.top - wrapperRect.top}px`,
-      right: `0px` // Fixiert am rechten Rand des Containers
+      right: `0px` 
     };
   }
 }
@@ -54,6 +58,8 @@ onHover(event: MouseEvent, project: any) {
 onLeave() {
   this.activePreview = '';
 }
+
+selectedProject: any = null;
 
 
 
