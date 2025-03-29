@@ -9,12 +9,15 @@
         $gradientEnd 0%,   
         $gradientStart 25%
     );
-    @media(max-width:900px){
-        height: 75vh;
-      }
-      @media(max-width:350px){
-       padding-bottom:40px;
-      }
+
+    @media(max-width: 900px) {
+        height: auto; // ÄNDERUNG: Höhe flexibel für kleinere Bildschirme
+        padding: 40px 0;
+    }
+
+    @media(max-width: 350px) {
+        padding-bottom: 40px;
+    }
 }
 
 .contentWrapper {
@@ -24,10 +27,12 @@
     @include dFlex(center, center);
     margin: 0 40px;
     gap: 96px;
-    @media(max-width: 1050px){
-        flex-direction: column;
+
+    @media(max-width: 1050px) {
+        flex-direction: column; // ÄNDERUNG: Stack auf kleineren Bildschirmen
     }
-    @media(max-width: 600px){
+
+    @media(max-width: 600px) {
         margin: 0;
         padding: 0 10px;
     }
@@ -38,37 +43,52 @@
     background: rgba($gradientEnd, 0.9);
     border-radius: 30px;
     border: 1px solid $mainColor;
-    @media(max-width: 900px){
-        height: 40%;
-    }
-    @media(max-width: 600px){
-       text-align: center;
+    padding: 40px; // ÄNDERUNG: Innenabstand für bessere Lesbarkeit
+
+    @media(max-width: 900px) {
+        height: auto; // ÄNDERUNG: Höhe an Inhalt anpassen
     }
 
+    @media(max-width: 600px) {
+        text-align: center;
+        padding: 20px; // ÄNDERUNG: Kleinere Abstände für bessere mobile Ansicht
+    }
 
     .overContent {
         position: relative;
         top: -40px;
         @include text('Karla', 24px, $mainColor, 700); 
-        text-align: left;      
+        text-align: left;  
+
+        @media(max-width: 600px) {
+            top: -20px; // ÄNDERUNG: Abstand reduzieren für kleinere Bildschirme
+        }
     }
 
     button {
         margin: 20px 0 20px 40px;
+
+        @media(max-width: 600px) {
+            margin: 20px auto; // ÄNDERUNG: Button mittig auf mobilen Geräten
+            display: block;
+        }
     }
 
     .textDiv {
         padding-left: 40px;
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             padding: 0 10px;
         }
 
         h2 {
             @include text('Fira Code', 64px, $mainColor, 700); 
-            @media(max-width: 600px){
+
+            @media(max-width: 600px) {
                 font-size: 56px;
             }
-            @media(max-width: 410px){
+
+            @media(max-width: 410px) {
                 font-size: 36px;
             }
         }
@@ -76,12 +96,15 @@
         h3 {
             @include text('Fira Code', 24px, white, 700);  
             margin: 12px 0;          
-            @media(max-width: 600px){
+
+            @media(max-width: 600px) {
                 font-size: 18px;
             }
+
             span {                
                 @include text('Fira Code', 24px, $mainColor, 700);  
-                @media(max-width: 600px){
+
+                @media(max-width: 600px) {
                     font-size: 16px;
                 }              
             }
@@ -103,12 +126,15 @@
     gap: 72px;
     @include dFlex(space-between, center);
     flex: 1;
-    @media(max-width: 1480px){
-        gap: 8px;
-        width:90%;
-    }
-    
 
+    @media(max-width: 1480px) {
+        gap: 8px;
+        width: 90%;
+    }
+
+    @media(max-width: 900px) {
+        justify-content: center; // ÄNDERUNG: Zentrierte Anordnung auf Tablets
+    }
 
     .skillDiv {
         width: 108px;
@@ -118,18 +144,21 @@
         text-align: center;
         @include text('Fira Code', 18px, white, 400);         
         position: relative; 
-        @media(max-width: 600px){
-        width: 30%;
-        height: 80px;
-        @media(max-width: 450px){
+
+        @media(max-width: 600px) {
+            width: 30%;
+            height: 80px;
+        }
+
+        @media(max-width: 450px) {
             width: 40%;
             height: 60px;
         }
-        } 
 
         > p {
             white-space: normal;
-            @media(max-width: 600px){
+
+            @media(max-width: 600px) {
                 margin: 4px 2px;
             }
         }
@@ -142,7 +171,8 @@
             &:hover {
                 scale: 1.1;
             }
-            @media(max-width:800px){
+
+            @media(max-width:800px) {
                 width: 40px;
                 height: 40px;
             }
@@ -165,15 +195,18 @@
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.2s ease-in-out, transform 0.2s;
-            >span{
+
+            > span {
                 color: $mainColor;
             }
-            >div{
+
+            > div {
                 padding-top: 10px;
                 color: $mainColor;
                 @include dFlex(center, center);
             }
-            // Das kleine Dreieck unten
+
+            // Kleines Dreieck unten
             &::after {
                 content: "";
                 position: absolute;
@@ -183,9 +216,9 @@
                 border-width: 8px;
                 border-style: solid;
                 border-color: white transparent transparent transparent;
-              }
-            }       
-        
+            }
+        }       
+
         &:last-of-type:hover .tooltip {
             opacity: 1;
             visibility: visible;
