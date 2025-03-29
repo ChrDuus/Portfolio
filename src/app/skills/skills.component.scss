@@ -9,6 +9,12 @@
         $gradientEnd 0%,   
         $gradientStart 25%
     );
+    @media(max-width:900px){
+        height: 75vh;
+      }
+      @media(max-width:350px){
+       padding-bottom:40px;
+      }
 }
 
 .contentWrapper {
@@ -18,6 +24,13 @@
     @include dFlex(center, center);
     margin: 0 40px;
     gap: 96px;
+    @media(max-width: 1050px){
+        flex-direction: column;
+    }
+    @media(max-width: 600px){
+        margin: 0;
+        padding: 0 10px;
+    }
 }
 
 .skillSet {
@@ -25,11 +38,19 @@
     background: rgba($gradientEnd, 0.9);
     border-radius: 30px;
     border: 1px solid $mainColor;
+    @media(max-width: 900px){
+        height: 40%;
+    }
+    @media(max-width: 600px){
+       text-align: center;
+    }
+
 
     .overContent {
         position: relative;
         top: -40px;
-        @include text('Karla', 24px, $mainColor, 700);       
+        @include text('Karla', 24px, $mainColor, 700); 
+        text-align: left;      
     }
 
     button {
@@ -38,16 +59,31 @@
 
     .textDiv {
         padding-left: 40px;
+        @media(max-width: 600px){
+            padding: 0 10px;
+        }
 
         h2 {
-            @include text('Fira Code', 64px, $mainColor, 700);            
+            @include text('Fira Code', 64px, $mainColor, 700); 
+            @media(max-width: 600px){
+                font-size: 56px;
+            }
+            @media(max-width: 410px){
+                font-size: 36px;
+            }
         }
 
         h3 {
-            @include text('Fira Code', 24px, white, 700);            
-
+            @include text('Fira Code', 24px, white, 700);  
+            margin: 12px 0;          
+            @media(max-width: 600px){
+                font-size: 18px;
+            }
             span {                
-                @include text('Fira Code', 24px, $mainColor, 700);                
+                @include text('Fira Code', 24px, $mainColor, 700);  
+                @media(max-width: 600px){
+                    font-size: 16px;
+                }              
             }
         }
 
@@ -67,6 +103,12 @@
     gap: 72px;
     @include dFlex(space-between, center);
     flex: 1;
+    @media(max-width: 1480px){
+        gap: 8px;
+        width:90%;
+    }
+    
+
 
     .skillDiv {
         width: 108px;
@@ -75,10 +117,21 @@
         flex-direction: column;
         text-align: center;
         @include text('Fira Code', 18px, white, 400);         
-        position: relative;  
+        position: relative; 
+        @media(max-width: 600px){
+        width: 30%;
+        height: 80px;
+        @media(max-width: 450px){
+            width: 40%;
+            height: 60px;
+        }
+        } 
 
         > p {
             white-space: normal;
+            @media(max-width: 600px){
+                margin: 4px 2px;
+            }
         }
 
         img {
@@ -88,6 +141,10 @@
 
             &:hover {
                 scale: 1.1;
+            }
+            @media(max-width:800px){
+                width: 40px;
+                height: 40px;
             }
         }
 

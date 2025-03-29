@@ -21,8 +21,11 @@ $mainColor: #3DCFB6;
 }
 body{
     margin: 0;
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;    
+}
+body.menu-open {
+  overflow: hidden !important;
+  height: 100vh;
 }
 h1, h2, h3{
     margin: 0;

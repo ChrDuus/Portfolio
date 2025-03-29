@@ -1,15 +1,40 @@
 <header>
   <div class="navBarWrapper">
     <div class="navBar">
-      <button  id="lang-btn" class="language-toggle" (click)="toggleLanguageColor()">
+      <button
+        id="lang-btn"
+        class="language-toggle"
+        (click)="toggleLanguageColor()"
+      >
         <span #langBtnDe class="de">DE</span>
         <span #langBtnEn class="en active">EN</span>
       </button>
       <a href="">About me </a>
-      <a href="">Skills  </a>
-      <a href="">Projects  </a>
+      <a href="">Skills </a>
+      <a href="">Projects </a>
     </div>
+
+    <img class="logo" src="../../../assets/img/navBar/logo.svg" alt="" />
+  </div>
+
+  <div class="burgerMenu" (click)="toggleMobileMenu()">
+    <div class="burgerBar"></div>
+    <div class="burgerBar"></div>
+    <div class="burgerBar"></div>
+  </div>
   
-  <img class="logo" src="../../../assets/img/navBar/logo.svg" alt="" />
-</div>
+  <!-- Hintergrund Overlay -->
+  <div [ngClass]="['overlayBackground', mobileMenuActive ? 'active' : '']">
+    <div class="menuOverlay">
+      <div class="navBarMobile">
+        <button id="lang-btn" class="language-toggle" (click)="toggleLanguageColor()">
+          <span #langBtnDe class="de">DE</span>
+          <span #langBtnEn class="en active">EN</span>
+        </button>
+        <a href="">About me</a>
+        <a href="">Skills</a>
+        <a href="">Projects</a>
+      </div>
+    </div>
+  </div>
 </header>

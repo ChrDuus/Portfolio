@@ -3,7 +3,7 @@
     <div class="slider-container">
       <div class="feedback-wrapper">
         @for (comment of feedbacks; track $index) {
-          <div class="feedback-card {{$index}}"
+          <div  [ngClass]="getCardClass($index)"
                [class.active]="$index === middleIndex"
               >
             <p>{{ comment.feedback }}</p>

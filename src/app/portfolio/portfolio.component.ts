@@ -1,4 +1,4 @@
-import { asNativeElements, Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { Projects } from '../interfaces/projects';
 import { OverlayComponent } from './overlay/overlay.component';
 
@@ -10,57 +10,71 @@ import { OverlayComponent } from './overlay/overlay.component';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
- 
-  projects: Projects[] =  [
+  projects: Projects[] = [
     { 
       name: 'Pokedex',
-       technologies: [
-        'HTML', 'CSS', 'JavaScript'
-      ] ,
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
-      description:'kommt noch'
+      description: 'A classic Pokedex with stats, evolutions and some more. Made with PokeAPI'
     },
-    {name: 'El Pollo Loco',
-      technologies: ['HTML', 'CSS', 'JavaScript'
-      ],
+    { 
+      name: 'El Pollo Loco',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
-      description:'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
     },
-    {name: 'El Pollo Loco',
-      technologies: ['HTML', 'CSS', 'JavaScript'
-      ],
+    { 
+      name: 'El Pollo Loco',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
-      description:'aber nicht heute'
+      description: 'aber nicht heute'
     }
   ];
 
-activePreview: string = '';
-previewPosition = { top: '0px', right: '0px' };
+  activePreview: string = '';
+  previewPosition = { top: '0px', right: '0px' };
 
-onHover(event: MouseEvent, project: any) {  
-  
-  this.activePreview = project.previewImg;
+  onHover(event: MouseEvent, project: any) {  
+    this.activePreview = project.previewImg;
 
-  const target = event.currentTarget as HTMLElement;
-  const wrapper = document.querySelector('.projectWrapper') as HTMLElement;
-  
-  if (wrapper) {
-    const targetRect = target.getBoundingClientRect();
-    const wrapperRect = wrapper.getBoundingClientRect();
+    const target = event.currentTarget as HTMLElement;
+    const wrapper = document.querySelector('.projectWrapper') as HTMLElement;
 
-    this.previewPosition = {
-      top: `${targetRect.top - wrapperRect.top}px`,
-      right: `0px` 
-    };
+    if (wrapper) {
+      const targetRect = target.getBoundingClientRect();
+      const wrapperRect = wrapper.getBoundingClientRect();
+
+      this.previewPosition = {
+        top: `${targetRect.top - wrapperRect.top}px`,
+        right: `0px`
+      };
+    }
   }
-}
 
-onLeave() {
-  this.activePreview = '';
-}
+  onLeave() {
+    this.activePreview = '';
+  }
 
-selectedProject: any = null;
+  selectedProject: any ;
+  selectedIndex: number = 0;
 
+  openProjectOverlay(project: Projects, index: number) {
+    this.selectedProject = project;
+    this.selectedIndex = index;
+    document.body.style.overflow = 'hidden';
+  }
 
-
+  closeOverlay() {
+    this.selectedProject = null;
+    document.body.style.overflow = 'auto';
+  }
+  nextProject() {
+    if (this.selectedIndex < this.projects.length - 1) {
+      this.selectedIndex++;
+    } else {
+      this.selectedIndex = 0; 
+    }
+  
+    this.selectedProject = this.projects[this.selectedIndex];
+  }
 }

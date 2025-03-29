@@ -1,22 +1,25 @@
-import { Component, Input } from '@angular/core';
-import { PortfolioComponent } from '../portfolio.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Projects } from '../../interfaces/projects';
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
-  imports: [],
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss'
 })
 export class OverlayComponent {
-@Input()
-singleProject: Projects = {
-  name:'',
-  technologies:[],
-  previewImg:'',
-  description:''
-}
-@Input() index:number = 0;
+  @Input() singleProject: Projects = {
+    name: '',
+    technologies: [],
+    previewImg: '',
+    description: ''
+  };
+  
+  @Input() index: number = 0;
+  @Output() close = new EventEmitter<void>();
+  @Output() next = new EventEmitter<void>();
 
+  closeOverlay() {
+    this.close.emit();
+  }
 }

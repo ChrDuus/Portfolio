@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-feedbacks',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './feedbacks.component.html',
   styleUrl: './feedbacks.component.scss'
 })
@@ -76,7 +77,11 @@ shiftCards(direction: string) {
     
   });
 }
-
+getCardClass(index: number): string {
+  if (index < this.middleIndex) return 'left feedback-card';
+  if (index > this.middleIndex) return 'right feedback-card';
+  return 'feedback-card';
+}
 
 
 

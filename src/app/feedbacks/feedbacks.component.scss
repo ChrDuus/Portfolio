@@ -3,6 +3,7 @@
 section {
   background-color: $gradientStart;
   text-align: center;
+  
 
   > h2 {
     @include text("Fira Code", 32px, $mainColor, 700);
@@ -13,6 +14,7 @@ section {
   .slider-container {
     position: relative;
     max-width: 1440px;
+    
     margin: auto;
    
   }
@@ -21,14 +23,14 @@ section {
     @include dFlex(center, center);
     width: 100%;
     height: 290px;
-    overflow: hidden;
+    overflow-x:hidden;
     position: relative;
   }
 
   .feedback-card {
     flex: 0 0 40%;
     width: 632px;
-    height: 90%;
+    height: 80%;
     padding: 20px;
     margin: 0 15px;
     background: rgba($mainColor, 0.3);
@@ -41,9 +43,20 @@ section {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     opacity: 0.5;
     transform: scale(0.8);
-    &:not(.active){
-        mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+       
+    
+    &.right{
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, ));
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    }
+    &.left{
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+      -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    }
+    @media(max-width: 450px){
+      height: 70%;
+      width: 80%;
+      padding: 0;
     }
     
    
@@ -81,7 +94,7 @@ section {
   .dots {
     @include dFlex(center, center);
     flex-direction: row;
-    margin-top: 15px;
+    margin: 20px 0;
 
     span {
       height: 10px;

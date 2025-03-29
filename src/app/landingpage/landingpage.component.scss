@@ -5,6 +5,9 @@
   @include dFlex(center, center);
   flex-direction: column;
   overflow: hidden;
+  @media(min-height:1980px){
+    height: 50vh;
+  }
 }
 .contentWrapper {
   @include dFlex(center, center);
@@ -13,7 +16,8 @@
   max-width: 1440px;
 
   h1 {
-    @include text('Karla', 128px, white, 400)
+    @include text('Karla', 128px, white, 400);
+    
    
   }
   h2 {
@@ -26,6 +30,7 @@
   @include dFlex(space-between, center);
   button {
     margin: 40px 30px;
+    
   }
 }
 
@@ -148,3 +153,40 @@ p {
       transform: translateX(-34%); 
     }
   }
+
+  @media(max-width: 900px){
+    .contentWrapper{
+    h1 {
+      @include text('Karla', 62px, white, 400);
+     
+    }
+    h2 {
+      @include text('Fira Code', 24px, white, 400);
+  }
+}
+.buttonDiv {
+  @include dFlex(space-between, center);
+  button {
+    margin: 40px 15px;
+  }
+}
+
+@media(max-width: 430px){
+  .contentWrapper{
+    h1{
+  font-size: 44px;
+    }    
+}
+.buttonDiv{
+  button{    
+      margin: 40px 10px;   
+      width: 50%; 
+  }
+}
+}
+
+
+
+
+
+}

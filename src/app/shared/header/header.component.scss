@@ -3,7 +3,7 @@
 header {
   height: 98px;
   width: 100%;
-  background: linear-gradient(to right, $gradientStart, $gradientEnd);
+  background: linear-gradient(to right, $gradientStart, $gradientEnd );
   @include dFlex(center, center);
 }
 
@@ -16,15 +16,15 @@ header {
   @include dFlex(space-between, center);
   flex: 1;
 
- 
-
   .navBar {
     padding-left: 50px;
     gap: 24px;
     @include dFlex(space-between, center);
     max-width: 1440px;
-  }
+  }  
 }
+
+
 
 a {
   font-family: Fira Code;
@@ -83,19 +83,19 @@ a {
   .de {
     left: 0;
     background: transparent;
-    border-radius: 100px;   
+    border-radius: 100px;
     color: rgba($mainColor, 0.5);
-    border:none;
+    border: none;
 
-    &.active{
+    &.active {
       background: $mainColor;
       color: white;
     }
   }
 
-   .en {
+  .en {
     right: 0;
-    margin-right:-2px;
+    margin-right: -2px;
     background: transparent;
     border-radius: 100px;
     border: none;
@@ -105,8 +105,105 @@ a {
     &.active {
       background: $mainColor;
       color: white;
-     }
+    }
+  }
+}
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 40px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+
+  .burgerBar {
+    background-color: $mainColor;
+    height: 3px;
+    width: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+.burgerMenu {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 40px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  @media(max-width: 350px){
+    padding-right: 10px;
+  }
+  .burgerBar {
+    background-color: $mainColor;
+    height: 3px;
+    width: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 }
 
+/* Hintergrund Overlay */
+.overlayBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  
+  
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Menü Overlay */
+.menuOverlay {
+  background: linear-gradient(to top right, $gradientStart, $gradientEnd);
+  border: 1px solid $mainColor;
+  border-radius: 30px;
+  height: 252px;
+  width: 252px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  position: absolute;
+  top: 80px;
+  right: 80px;
+
+  .navBarMobile {
+    display: flex;
+    justify-content: center;
+    flex-direction:column-reverse;
+    gap: 24px;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
 // border am language button fixen (1px rand)
+
+@media (max-width: 900px) {
+  .burgerMenu {
+    @include dFlex(center, center);
+
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  
+  .navBar {
+    display: none !important;
+  }
+}
