@@ -1,18 +1,39 @@
 {
     "app-header": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+      "menuBtnAboutMe": "Über mich",
+      "menuBtnSkills": "Skills",
+      "menuBtnProjects": "Projekte"
     },
     "app-landingPage": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+      "buttonWork": "Check my work",
+      "buttonContact": "Contact me",
+      "job": "Frontend Developer",
+      "bannerRemote": "Available for remotework",
+      "bannerFrontEnd": "Frontend Developer",
+      "bannerWork": "Open to work & learn",
+      "bannerBased": "Based in Buesum"
     },
     "app-about-me": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },"app-skills": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+      "whoAmI": "Who I am",
+      "aboutMe": "About me",
+      "aboutMeText" : "Hey there, I'm Lukas! Write some information about yourself  that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+      "aboutMeBased" : "Where are you based? Would you be open to working remotely or potentially relocating?",
+      "aboutMeMind" : "Show that you are open-minded. Are you enthusiastic about learningnew technologies and continually improving your skills?",
+      "aboutMeSkills" : "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."    
+      
+    },
+    "app-skills": {
+      "h3Technologies": "Technologies",
+      "h2SkillSet": "Skill Set",
+      "spanIntroduction" : "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it  is for you to keep up with the rapid changes in web development.",
+      "h3youNeed": "You need",
+      "anotherSkill?": "another Skill?",
+      "spanFeelFree" :"Feel free to contact me. I look forward to expanding on my previous knowledge",
+      "btnLetsTalk" : "Let's Talk",
+      "toolTip1": "I have special",
+      "toolTip2": "interests in learning"
+       
+       
     },
     "app-portfolio": {
       "hello": "hello {{value}}",
@@ -30,5 +51,4 @@
       "hello": "hello {{value}}",
       "title": "Translation Demo"
     }
-
   }

@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Projects } from '../../interfaces/projects';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss'
 })

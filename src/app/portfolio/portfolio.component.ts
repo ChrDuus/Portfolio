@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Projects } from '../interfaces/projects';
 import { OverlayComponent } from './overlay/overlay.component';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [OverlayComponent],
+  imports: [OverlayComponent, TranslatePipe, TranslateDirective],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })

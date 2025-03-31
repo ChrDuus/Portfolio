@@ -1,17 +1,14 @@
 <section class="skillsSection">
   <div class="contentWrapper">
     <div class="skillSet">
-      <h3 class="overContent">Technologies</h3>
+      <h3 class="overContent">{{"app-skills.h3Technologies" | translate}}</h3>
       <div class="textDiv">
-        <h2>Skill Set</h2>
-        <span class="skillIntroduction">A short introduction of your skills. Highlight your experience of  using
-           different front-end technologies and emphasise your openness to
-            learning and adapting to new technologies. Show how important it
-             is for you to keep up with the rapid changes in web development.</span>
-        <h3>You need <span>another Skill?</span></h3>
-        <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+        <h2>{{"app-skills.h2SkillSet" | translate}}</h2>
+        <span class="skillIntroduction">{{"app-skills.spanIntroduction" | translate}}</span>
+        <h3>{{"app-skills.h3youNeed" | translate}} <span>{{"app-skills.anotherSkill?" | translate}}</span></h3>
+        <span>{{"app-skills.spanFeelFree" | translate}}</span>
       </div>
-      <button>Let's talk</button>
+      <button>{{"app-skills.btnLetsTalk" | translate}}</button>
     </div>
 
     <div class="skillButtons">
@@ -22,7 +19,7 @@
 
         @if ($index == imgURLS.length - 1) {
         <div class="tooltip">
-          <span>I have special<br> interests in learning</span>
+          <span>{{"app-skills.toolTip1" | translate}}<br> {{"app-skills.toolTip2" | translate}}</span>
           <div>
             <div>
               <img src="../../assets/img/skills/react.svg" alt="" />
