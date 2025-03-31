@@ -13,7 +13,8 @@ import {TranslateService} from "@ngx-translate/core";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, MaincontentComponent, LandingpageComponent, TranslateModule],
+  imports: [CommonModule, RouterOutlet, HeaderComponent,
+     FooterComponent, MaincontentComponent, LandingpageComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

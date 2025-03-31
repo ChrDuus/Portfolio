@@ -94,7 +94,7 @@ section {
   .dots {
     @include dFlex(center, center);
     flex-direction: row;
-    margin: 20px 0;
+    margin-top: 20px;
 
     span {
       height: 10px;

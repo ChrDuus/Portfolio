@@ -11,7 +11,7 @@
     );
 
     @media(max-width: 900px) {
-        height: auto; // ÄNDERUNG: Höhe flexibel für kleinere Bildschirme
+        height: auto; 
         padding: 40px 0;
     }
 
@@ -29,7 +29,7 @@
     gap: 96px;
 
     @media(max-width: 1050px) {
-        flex-direction: column; // ÄNDERUNG: Stack auf kleineren Bildschirmen
+        flex-direction: column; 
     }
 
     @media(max-width: 600px) {
@@ -43,15 +43,15 @@
     background: rgba($gradientEnd, 0.9);
     border-radius: 30px;
     border: 1px solid $mainColor;
-    padding: 40px; // ÄNDERUNG: Innenabstand für bessere Lesbarkeit
+    padding: 40px; 
 
     @media(max-width: 900px) {
-        height: auto; // ÄNDERUNG: Höhe an Inhalt anpassen
+        height: auto; 
     }
 
     @media(max-width: 600px) {
         text-align: center;
-        padding: 20px; // ÄNDERUNG: Kleinere Abstände für bessere mobile Ansicht
+        padding: 20px; 
     }
 
     .overContent {
@@ -61,7 +61,7 @@
         text-align: left;  
 
         @media(max-width: 600px) {
-            top: -20px; // ÄNDERUNG: Abstand reduzieren für kleinere Bildschirme
+            top: -20px; 
         }
     }
 
@@ -69,7 +69,7 @@
         margin: 20px 0 20px 40px;
 
         @media(max-width: 600px) {
-            margin: 20px auto; // ÄNDERUNG: Button mittig auf mobilen Geräten
+            margin: 20px auto;
             display: block;
         }
     }
@@ -133,7 +133,7 @@
     }
 
     @media(max-width: 900px) {
-        justify-content: center; // ÄNDERUNG: Zentrierte Anordnung auf Tablets
+        justify-content: center;
     }
 
     .skillDiv {
@@ -206,7 +206,7 @@
                 @include dFlex(center, center);
             }
 
-            // Kleines Dreieck unten
+            
             &::after {
                 content: "";
                 position: absolute;

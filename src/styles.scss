@@ -21,7 +21,8 @@ $mainColor: #3DCFB6;
 }
 body{
     margin: 0;
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth; 
+    gap:50px;   
 }
 body.menu-open {
   overflow: hidden !important;

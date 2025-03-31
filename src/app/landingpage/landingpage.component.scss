@@ -55,8 +55,13 @@
       width: 1px;
       height: 300px;
       background-color: $mainColor;
+      @media(max-width: 620px){
+        height: 220px;
+      }
   }
-  
+  @media(max-width: 768px){
+    left:15px;
+  }
 }
 
 .edgeLine-right{
@@ -66,6 +71,10 @@
   position: absolute;
   bottom: 0;
   right: 40px;
+  @media(max-width: 620px){
+    gap:10px;
+    
+  }
   .emailLandingpage{
     color: white;
     font-family: Karla;
@@ -74,6 +83,14 @@
     height: 220px;
     background-color: white;
     width: 1px;
+    @media(max-width: 620px){
+      height: 150px;
+      
+    }
+    @media(max-width:370px){
+      height: 100px;
+    }
+    
   }
   .emailLandingpage{
     transform: rotate(-90deg);
@@ -86,6 +103,9 @@
     &:hover{
       scale: 1.1;
     }
+  }
+  @media(max-width: 768px){
+    right:15px;
   }
 }
 
@@ -170,6 +190,29 @@ p {
     margin: 40px 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .bannerSection {
+    padding-bottom: 20px; 
+  }
+
+  .bannerWrapper {
+    transform: none; 
+  }
+
+  .banner {
+    gap: 20px; 
+    animation-duration: 10s; 
+  }
+
+  p {
+    font-size: 18px; 
+  }
+}
+
+  
+
+
 
 @media(max-width: 430px){
   .contentWrapper{

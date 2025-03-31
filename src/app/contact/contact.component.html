@@ -1,1 +1,70 @@
-<p>contact works!</p>
+<section>
+  <div class="contentWrapper">
+    <div class="contactDiv">
+      <h3>Contact me</h3>
+      <h2>Let's work together</h2>
+      <h3>Got a problem to solve?</h3>
+      <span
+        >Ecourage prople to cantact you and describe what role you are intereset
+        in.<br />
+        Show that you wll add value to their projects through your work</span
+      >
+      <span
+        >Need a Frontend Developer?
+        <p>Let's talk!</p></span
+      >
+    </div>
+
+    <div class="formDiv">
+        <form #contactForm="ngForm" (ngSubmit)="validateForm()">
+            <div class="inputText">
+              <label for="name">What's your name?</label>
+              <input
+                #name="ngModel"
+                name="name"
+                required
+                minlength="3"
+                [(ngModel)]="contactData.name"
+                type="text"
+                id="name"
+                [class.invalid]="invalidFields.includes('name')"
+                [attr.placeholder]="invalidFields.includes('name') ? 'Please enter at least 3 letters' : 'Your Name goes here'"
+              />
+            </div>
+          
+            <div class="inputText">
+              <label for="eMail">What's your email?</label>
+              <input
+                #email="ngModel"
+                name="email"
+                required
+                [(ngModel)]="contactData.email"
+                type="email"
+                id="eMail"
+                [class.invalid]="invalidFields.includes('email')"
+                [attr.placeholder]="invalidFields.includes('email') ? 'Enter a valid email address' : 'Your Email'"
+              />
+            </div>
+          
+            <div class="inputText">
+              <label for="message">How can I help you?</label>
+              <textarea
+                #message="ngModel"
+                name="message"
+                required
+                minlength="10"
+                [(ngModel)]="contactData.message"
+                id="message"
+                [class.invalid]="invalidFields.includes('message')"
+                [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'Hello Christian, I am interested in...'"
+              ></textarea>
+              <button type="submit">Say Hello :)</button>
+            </div>          
+          </form>
+          
+      </div>
+      
+
+      
+  </div>
+</section>
