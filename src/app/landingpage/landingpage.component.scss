@@ -12,9 +12,13 @@
 .contentWrapper {
   @include dFlex(center, center);
   flex-direction: column;
+  position:relative;
+  overflow-x:hidden;
   flex: 1;
   max-width: 1440px;
-
+  @media(max-width: 500px){
+    padding-bottom: 160px;
+  }
   h1 {
     @include text('Karla', 128px, white, 400);
     
@@ -32,6 +36,14 @@
     margin: 40px 30px;
     
   }
+}
+.buttonA{
+  text-decoration: none;;
+  cursor: pointer;
+  color: white;
+  &:hover{
+    color: $mainColor;
+  }  
 }
 
 .edgeLine-left{
@@ -73,11 +85,13 @@
   right: 40px;
   @media(max-width: 620px){
     gap:10px;
+    width: 100px;
+    flex-wrap: wrap;
     
   }
   .emailLandingpage{
     color: white;
-    font-family: Karla;
+    font-family: 'Karla';
   }
   .whiteLineDown{
     height: 220px;
@@ -88,14 +102,18 @@
       
     }
     @media(max-width:370px){
-      height: 100px;
+      height: 120px;
     }
     
   }
   .emailLandingpage{
     transform: rotate(-90deg);
     margin-bottom: 40px;
-    font-size: 18px;
+    @include text('Karla', 18px, white, 400);
+    text-decoration: none;
+    &:hover{
+     color: $mainColor;
+    }
   }
   img{
     height: 32px;
@@ -186,10 +204,15 @@ p {
 }
 .buttonDiv {
   @include dFlex(space-between, center);
-  button {
+  >button {
     margin: 40px 15px;
-  }
+    
+      }
+      
+      
+
 }
+
 
 @media (max-width: 768px) {
   .bannerSection {

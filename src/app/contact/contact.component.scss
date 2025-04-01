@@ -11,7 +11,7 @@ section {
 h2 {
   @include text("Fira Code", 64px, $mainColor, 700);
   margin: 15px 0;
-  text-align: center; 
+  text-align: left; 
 }
 
 h3 {
@@ -21,10 +21,12 @@ h3 {
 }
 
 .contactDiv {
+  @include dFlex(center, start);
+  flex-direction: column;
   padding-left: 20px;
   flex: 1;
   height: 100%;
-  text-align: center; 
+  text-align: left; 
   > span {
     @include text("Karla", 16px, white, 700);
     > p {

@@ -18,10 +18,11 @@ $mainColor: #3DCFB6;
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth; 
 }
 body{
     margin: 0;
-    scroll-behavior: smooth; 
+    
     gap:50px;   
 }
 body.menu-open {
@@ -46,6 +47,7 @@ button{
     &:hover{
         border: 2px solid $mainColor;
         color: $mainColor;
+        cursor:pointer;
     }
 }
 

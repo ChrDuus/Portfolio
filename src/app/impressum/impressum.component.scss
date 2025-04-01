@@ -1,0 +1,20 @@
+@import "./../../styles.scss";
+
+
+section{
+    background: linear-gradient(to right, $gradientStart, $gradientEnd);
+    @include dFlex(center, center);
+}
+.contentWrapper{
+    max-width: 1440px;
+    >p{
+        @include text('Karla', 18px, white, 400);
+    }
+    
+}
+a{
+    color: white;
+}
+li{
+    @include text('Karla', 18px, white, 400);
+}

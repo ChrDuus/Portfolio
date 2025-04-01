@@ -39,12 +39,14 @@
     }
 }
 
+
 .skillSet {
     flex: 1;
     background: rgba($gradientEnd, 0.9);
     border-radius: 30px;
     border: 1px solid $mainColor;
     padding: 40px; 
+    
 
     @media(max-width: 900px) {
         height: auto; 
@@ -226,5 +228,12 @@
             visibility: visible;
             transform: translateX(-50%) translateY(-5px);
         }
+    }
+}
+.talkButton{
+    text-decoration:none;
+    color: white;
+    &:hover{
+        color:$mainColor;
     }
 }
