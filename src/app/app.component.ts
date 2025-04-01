@@ -22,8 +22,9 @@ export class AppComponent {
   title = 'angular-Portfolio';
 
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+   
+  }
+  toggleLanguage(language:string){
+   
   }
 }

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -12,12 +13,25 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
+  http = inject(HttpClient);
+
   contactData = {
     name:"",
     email:"",
     message:"",
     privacyPolicy: false
   }
+
+  post = {
+    endPoint: 'https://christian-duus.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
   invalidFields: string[] = [];
 
@@ -39,9 +53,35 @@ export class ContactComponent {
       this.invalidFields.push('message');
       this.contactData.message = ''; 
     }
+    if (!this.contactData.privacyPolicy) {
+      this.invalidFields.push('checkBox');
+      
+    }
 
     if (this.invalidFields.length === 0) {
-      console.log('Form submitted successfully!', this.contactData);
+      this.contactData.name = '';
+      this.contactData.email = ''; 
+      this.contactData.message = '';
+    }
+  }
+
+  onSubmit(ngForm: NgForm) {
+    this.validateForm()
+    if (ngForm.submitted && this.invalidFields.length === 0 ) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.log(error)
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid ) {
+
+      ngForm.resetForm();
     }
   }
   

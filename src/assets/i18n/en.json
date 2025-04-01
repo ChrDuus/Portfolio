@@ -37,19 +37,40 @@
      
   },
   "app-portfolio": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "h3Portfolio": "Portfolio",
+    "h2FeaturedProjects": "Featured Projects",
+    "pExplore": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    
+        
+  },
+  "app-overlay":{
+    "h3About": "What is this project about?",
+    "nextBtn" : "Next Project"
   },
   "app-feedbacks": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "h2Collegues": "What my collegues say about me"
+    
   },
   "app-contact": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "h3ContactMe": "Contact me",
+    "h2workTogether": "Let's work together",
+    "h3Problem": "Got a problem to solve?",
+    "spanEcourage": "EcouragePeopleto cantact you and describe what role you are intereset in. Show that you wll add value to their projects through your work",
+    "spanNeedMe": "Need a Frontend Deeveloper?",
+    "pTalk": "Let's talk",
+    "formLabelName": "What's your name?",
+    "formInputPlaceholderName": "Your Name goes here",
+    "formLabelMail": "What's your email?",
+    "formInputPlaceholderMail": "Your email",
+    "formLabelMessage": "How can i help you?",
+    "formInputPlaceholderMessage": "'Hello Christian, I am interested in...'",
+    "formInputPlaceholderMessageInvalid": "'Hello Christian, I am interested in...'",
+    "formBtn": "Say Hello :)"
+        
+       
   },
   "app-footer": {
-    "hello": "hello {{value}}",
+    "legalNotice": "Legal Notice",
     "title": "Translation Demo"
   }
 }

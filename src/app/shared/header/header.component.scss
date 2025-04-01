@@ -143,7 +143,6 @@ a {
   }
 }
 
-/* Hintergrund Overlay */
 .overlayBackground {
   display: none;
   position: fixed;
@@ -162,7 +161,6 @@ a {
   }
 }
 
-/* Menü Overlay */
 .menuOverlay {
   background: linear-gradient(to top right, $gradientStart, $gradientEnd);
   border: 1px solid $mainColor;
@@ -175,6 +173,10 @@ a {
   position: absolute;
   top: 80px;
   right: 80px;
+  @media(max-width: 350px){
+    right: 50%;
+    transform: translateX(50%);
+  }
 
   .navBarMobile {
     display: flex;
@@ -192,7 +194,6 @@ body.menu-open {
 }
 
 
-// border am language button fixen (1px rand)
 
 @media (max-width: 900px) {
   .burgerMenu {

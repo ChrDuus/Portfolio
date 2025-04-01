@@ -1,54 +1,76 @@
 {
-    "app-header": {
-      "menuBtnAboutMe": "Über mich",
-      "menuBtnSkills": "Skills",
-      "menuBtnProjects": "Projekte"
-    },
-    "app-landingPage": {
-      "buttonWork": "Check my work",
-      "buttonContact": "Contact me",
-      "job": "Frontend Developer",
-      "bannerRemote": "Available for remotework",
-      "bannerFrontEnd": "Frontend Developer",
-      "bannerWork": "Open to work & learn",
-      "bannerBased": "Based in Buesum"
-    },
-    "app-about-me": {
-      "whoAmI": "Who I am",
-      "aboutMe": "About me",
-      "aboutMeText" : "Hey there, I'm Lukas! Write some information about yourself  that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-      "aboutMeBased" : "Where are you based? Would you be open to working remotely or potentially relocating?",
-      "aboutMeMind" : "Show that you are open-minded. Are you enthusiastic about learningnew technologies and continually improving your skills?",
-      "aboutMeSkills" : "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."    
-      
-    },
-    "app-skills": {
-      "h3Technologies": "Technologies",
-      "h2SkillSet": "Skill Set",
-      "spanIntroduction" : "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it  is for you to keep up with the rapid changes in web development.",
-      "h3youNeed": "You need",
-      "anotherSkill?": "another Skill?",
-      "spanFeelFree" :"Feel free to contact me. I look forward to expanding on my previous knowledge",
-      "btnLetsTalk" : "Let's Talk",
-      "toolTip1": "I have special",
-      "toolTip2": "interests in learning"
+  "app-header": {
+    "menuBtnAboutMe": "Über mich",
+    "menuBtnSkills": "Skills",
+    "menuBtnProjects": "Projekte"
+  },
+  "app-landingPage": {
+    "buttonWork": "Meine Arbeiten",
+    "buttonContact": "Kontaktiere mich",
+    "job": "Frontend Developer",
+    
+    "bannerRemote": "Available for remotework",
+    "bannerFrontEnd": "Frontend Developer",
+    "bannerWork": "Open to work & learn",
+    "bannerBased": "Based in Buesum"
+  },
+  "app-about-me": {
+    "whoAmI": "Wer bin ich?",
+    "aboutMe": "Über mich",
+    "aboutMeText" : "Hey there, I'm Lukas! Write some information about yourself  that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "aboutMeBased" : "Ich lebe in Büsum an der Nordsee......",
+    "aboutMeMind" : "Show that you are open-minded. Are you enthusiastic about learningnew technologies and continually improving your skills?",
+    "aboutMeSkills" : "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."    
+    
+  },
+  "app-skills": {
+    "h3Technologies": "Technologies",
+    "h2SkillSet": "Skill Set",
+    "spanIntroduction" : "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it  is for you to keep up with the rapid changes in web development.",
+    "h3youNeed": "You need",
+    "anotherSkill?": "another Skill?",
+    "spanFeelFree" :"Feel free to contact me. I look forward to expanding on my previous knowledge",
+    "btnLetsTalk" : "Let's Talk",
+    "toolTip1": "I have special",
+    "toolTip2": "interests in learning"
+     
+     
+  },
+  "app-portfolio": {
+    "h3Portfolio": "Portfolio",
+    "h2FeaturedProjects": "Featured Projects",
+    "pExplore": "Hier gibt's eine Auswahl meiner bisherigen Projekte"
+    
+        
+  },
+  "app-overlay":{
+    "h3About": "Worum geht's hier?",
+    "nextBtn" : "Nächstes Projekt"
+  },
+  "app-feedbacks": {
+    "h2Collegues": "Das sagen meine Kollegen über mich"
+    
+  },
+  "app-contact": {
+    "h3ContactMe": "Contact me",
+    "h2workTogether": "Let's work together",
+    "h3Problem": "Got a problem to solve?",
+    "spanEcourage": "EcouragePeopleto cantact you and describe what role you are intereset in. Show that you wll add value to their projects through your work",
+    "spanNeedMe": "Need a Frontend Deeveloper?",
+    "pTalk": "Let's talk",
+    "formLabelName": "What's your name?",
+    "formInputPlaceholderName": "Your Name goes here",
+    "formLabelMail": "What's your email?",
+    "formInputPlaceholderMail": "Your email",
+    "formLabelMessage": "How can i help you?",
+    "formInputPlaceholderMessage": "'Hello Christian, I am interested in...'",
+    "formInputPlaceholderMessageInvalid": "'Hello Christian, I am interested in...'",
+    "formBtn": "Say Hello :)"
+        
        
-       
-    },
-    "app-portfolio": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-    "app-feedbacks": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-    "app-contact": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    },
-    "app-footer": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
-    }
+  },
+  "app-footer": {
+   "legalNotice": "Impressum",
+    "title": "Translation Demo"
   }
+}

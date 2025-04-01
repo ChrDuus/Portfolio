@@ -1,24 +1,22 @@
 <section>
   <div class="contentWrapper">
     <div class="contactDiv">
-      <h3>Contact me</h3>
-      <h2>Let's work together</h2>
-      <h3>Got a problem to solve?</h3>
+      <h3>{{ 'app-contact.h3ContactMe' | translate}}</h3>
+      <h2>{{ 'app-contact.h2workTogether' | translate}}</h2>
+      <h3>{{ 'app-contact.h3Problem' | translate}}</h3>
       <span
-        >Ecourage prople to cantact you and describe what role you are intereset
-        in.<br />
-        Show that you wll add value to their projects through your work</span
+        >{{ 'app-contact.spanEcourage' | translate}}</span
       >
       <span
-        >Need a Frontend Developer?
-        <p>Let's talk!</p></span
+        >{{ 'app-contact.spanNeedMe' | translate}}
+        <p>{{ 'app-contact.pTalk' | translate}}</p></span
       >
     </div>
 
     <div class="formDiv">
-        <form #contactForm="ngForm" (ngSubmit)="validateForm()">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm); ">
             <div class="inputText">
-              <label for="name">What's your name?</label>
+              <label for="name">{{ 'app-contact.formLabelName' | translate}}</label>
               <input
                 #name="ngModel"
                 name="name"
@@ -33,7 +31,7 @@
             </div>
           
             <div class="inputText">
-              <label for="eMail">What's your email?</label>
+              <label for="eMail">{{ 'app-contact.formLabelMail' | translate}}</label>
               <input
                 #email="ngModel"
                 name="email"
@@ -47,7 +45,7 @@
             </div>
           
             <div class="inputText">
-              <label for="message">How can I help you?</label>
+              <label for="message">{{ 'app-contact.formLabelMessage' | translate}}</label>
               <textarea
                 #message="ngModel"
                 name="message"
@@ -58,7 +56,15 @@
                 [class.invalid]="invalidFields.includes('message')"
                 [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'Hello Christian, I am interested in...'"
               ></textarea>
-              <button type="submit">Say Hello :)</button>
+              <div class="checkboxDiv">
+                <input [(ngModel)]="contactData.privacyPolicy"
+                 type="checkbox" name=""
+                  id="checkBox"
+                  [class.invalid]="invalidFields.includes('checkBox')"
+                  >
+                  <p>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
+              </div>
+              <button type="submit">{{ 'app-contact.formBtn' | translate}}</button>
             </div>          
           </form>
           
