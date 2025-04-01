@@ -57,12 +57,7 @@ export class ContactComponent {
       this.invalidFields.push('checkBox');
       
     }
-
-    if (this.invalidFields.length === 0) {
-      this.contactData.name = '';
-      this.contactData.email = ''; 
-      this.contactData.message = '';
-    }
+   
   }
 
   onSubmit(ngForm: NgForm) {
@@ -77,7 +72,7 @@ export class ContactComponent {
           error: (error) => {
             console.log(error)
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info(this.contactData), 
         });
     } else if (ngForm.submitted && ngForm.form.valid ) {
 

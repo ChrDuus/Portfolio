@@ -26,6 +26,7 @@
     @media (max-width: 1024px) {
         flex-direction: column; 
         max-height: none;
+        max-width:100%;
     }
 
     .contentLeft {
@@ -70,7 +71,7 @@
 
     a button {
         padding: 8px 16px;
-        font-size: 14px; 
+        font-size: 14px;
     }
 }
 
@@ -87,6 +88,9 @@
         top: 5%;
         @include text('Fira Code', 36px, white, 700);
         cursor: pointer;
+        @media(max-width: 1024px){
+            right: 10%;
+        }
     }
 
     > img {
@@ -104,6 +108,7 @@
         padding: 10px;
     }
 }
+
 
 @media (max-width: 768px) {
     .contentWrapper {
@@ -145,7 +150,7 @@
     }
 
     .contentLeft {
-        > h1 {
+        h1 {
             font-size: 48px;
         }
 

@@ -63,14 +63,14 @@ slideRight() {
 shiftCards(direction: string) {
   const feedbackCards = document.querySelectorAll('.feedback-card');
   if (direction === 'left') {
-    this.currentOffset += 105; 
+    this.currentOffset += 107; 
   } else if (direction === 'right') {
-    this.currentOffset -= 105; 
+    this.currentOffset -= 107; 
   }
-  if(this.currentOffset > 210){
-    this.currentOffset = 210;
-  }if(this.currentOffset < -210){
-    this.currentOffset= -210
+  if(this.currentOffset > 214){
+    this.currentOffset = 214;
+  }if(this.currentOffset < -214){
+    this.currentOffset= -214
   }
   feedbackCards.forEach((card: any, index:number) => {
     let isActive:boolean = index === this.middleIndex;
