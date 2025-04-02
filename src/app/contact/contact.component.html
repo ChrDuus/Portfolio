@@ -1,4 +1,13 @@
 <section>
+  @if(showOverlay){
+    <div class="overlay">
+    <div class="overlay-content">
+      <h2>{{ 'app-contact.successMessage' | translate }}</h2>
+      
+      <button (click)="closeOverlay()">{{ 'app-contact.closeButton' | translate }}</button>
+    </div>
+  </div>
+}
   <div class="contentWrapper">
     <div class="contactDiv">
       <h3>{{ 'app-contact.h3ContactMe' | translate}}</h3>
@@ -62,15 +71,14 @@
                   id="checkBox"
                   [class.invalid]="invalidFields.includes('checkBox')"
                   >
-                  <p>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
+                  <p>I've read the <a href="#imprint">privacy policy</a> and agree to the processing of my data as outlined</p>
               </div>
               <button type="submit">{{ 'app-contact.formBtn' | translate}}</button>
-            </div>          
+            </div>  
+           
           </form>
           
-      </div>
-      
-
-      
+      </div>      
   </div>
+
 </section>

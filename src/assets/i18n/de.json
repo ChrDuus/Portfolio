@@ -65,12 +65,86 @@
     "formLabelMessage": "How can i help you?",
     "formInputPlaceholderMessage": "'Hello Christian, I am interested in...'",
     "formInputPlaceholderMessageInvalid": "'Hello Christian, I am interested in...'",
-    "formBtn": "Say Hello :)"
+    "formBtn": "Say Hello :)",    
+    "successMessage": "Ihre Nachricht wurde erfolgreich versendet!",
+    "closeButton": "Schließen"
         
        
   },
   "app-footer": {
    "legalNotice": "Impressum",
     "title": "Translation Demo"
-  }
+  },
+  
+    "app-impressum": {
+        "h1": "Impressum",
+        "p": "Informationen zum Dienstanbieter.",
+        "pName": "Christian Duus",
+        "pAddress": "Hirtenstall 30 B, 25761 Büsum, Deutschland",
+        "pContact": "",
+        "strongTel": "Telefon:",
+        "tel": "01775353218",
+        "strongEmail": "E-Mail:",
+        "email": "kontakt@christian-duus.de",
+        "h2EuDispute": "EU-Streitbeilegung",
+        "pEuDispute": "Gemäß der Verordnung über die Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Plattform zur Online-Streitbeilegung (OS-Plattform) informieren. Verbraucher haben die Möglichkeit, Beschwerden über die Online-Streitbeilegungsplattform der Europäischen Kommission unter folgender Adresse einzureichen:",
+        "aEuDisputeLink": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE",
+        "pEuDisputeNote": "Wir möchten jedoch darauf hinweisen, dass wir weder bereit noch verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        "pCopyright": "Alle Texte sind urheberrechtlich geschützt.",
+        "pSource": "Quelle: Erstellt mit dem Impressum-Generator von AdSimple",
+        "h1PrivacyPolicy": "Datenschutzerklärung",
+        "h2Introduction": "Einführung und Überblick",
+        "pIntro": "Wir haben diese Datenschutzerklärung (Version 01.04.2025-322972446) verfasst, um Ihnen gemäß den Bestimmungen der Datenschutz-Grundverordnung (DSGVO, EU) 2016/679 und geltendem nationalen Recht zu erklären, welche personenbezogenen Daten (nachfolgend als Daten bezeichnet) wir verarbeiten, zukünftig verarbeiten werden und welche rechtlichen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu verstehen.",
+        "strongShort": "Kurz gesagt:",
+        "pShortExplanation": "Wir informieren Sie umfassend über die Daten, die wir über Sie verarbeiten.",
+        "pPrivacyExplanation": "Datenschutzerklärungen klingen in der Regel sehr technisch und verwenden juristische Begriffe. Diese Datenschutzerklärung soll jedoch die wichtigsten Aspekte so einfach und transparent wie möglich beschreiben. Wenn es für die Klarheit notwendig ist, werden technische Begriffe in verständlicher Sprache erklärt, Links zu weiteren Informationen bereitgestellt und Grafiken verwendet. Wir informieren Sie in klarer und einfacher Sprache, dass wir personenbezogene Daten nur dann verarbeiten, wenn eine entsprechende rechtliche Grundlage vorliegt. Dies ist sicherlich nicht möglich, wenn man kurze, unklare und juristisch-technische Erklärungen gibt, wie sie oft im Internet zum Thema Datenschutz vorkommen. Wir hoffen, dass Sie die folgenden Erklärungen interessant und informativ finden und vielleicht ist ja auch etwas dabei, das Sie noch nicht wussten. Falls Sie dennoch Fragen haben, bitten wir Sie, sich an die zuständige Stelle zu wenden, die unten genannt wird oder im Impressum, den vorhandenen Links zu folgen und weitere Informationen auf den Seiten Dritter einzusehen. Unsere Kontaktdaten finden Sie natürlich auch im Impressum.",
+        "h2Scope": "Anwendungsbereich",
+        "pScope": "Diese Datenschutzerklärung gilt für alle personenbezogenen Daten, die von uns im Unternehmen verarbeitet werden, und für alle personenbezogenen Daten, die von uns beauftragte Unternehmen (Auftragsverarbeiter) verarbeiten. Personenbezogene Daten sind Informationen im Sinne von Art. 4 Nr. 1 DSGVO wie Name, E-Mail-Adresse und Postanschrift einer Person. Die Verarbeitung personenbezogener Daten stellt sicher, dass wir unsere Dienstleistungen und Produkte anbieten und abrechnen können, ob online oder offline. Der Anwendungsbereich dieser Datenschutzerklärung umfasst:",
+        "ulScope": [
+            "Alle von uns betriebenen Online-Präsenzen (Websites, Online-Shops)",
+            "Soziale Medien und E-Mail-Kommunikation",
+            "Mobile Apps für Smartphones und andere Geräte"
+        ],
+        "short_summary": "Kurz gesagt: Die Datenschutzerklärung gilt für alle Bereiche, in denen personenbezogene Daten im Unternehmen über die genannten Kanäle verarbeitet werden. Wenn wir mit Ihnen außerhalb dieser Kanäle rechtliche Beziehungen eingehen, werden wir Sie ggf. separat informieren.",
+        "legal_basis_title": "Rechtsgrundlage",
+        "legal_basis_description": "In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen über die rechtlichen Grundsätze und Regelungen, d.h. die rechtlichen Grundlagen der Datenschutz-Grundverordnung, die es uns ermöglichen, personenbezogene Daten zu verarbeiten.Bezüglich des EU-Rechts verweisen wir auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016. Sie können diese EU-Datenschutz-Grundverordnung online auf EUR-Lex, dem Zugang zum EU-Recht, unter https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679 einsehen.",
+        "processing_conditions": "Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:",
+        "consent": "Einwilligung (Artikel 6 Abs. 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung zur Verarbeitung von Daten für einen bestimmten Zweck gegeben. Ein Beispiel wäre das Speichern der Daten, die Sie in ein Kontaktformular eingeben.",
+        "contract": "Vertrag (Artikel 6 Abs. 1 lit. b DSGVO): Zur Erfüllung eines Vertrages oder vorvertraglicher Pflichten mit Ihnen verarbeiten wir Ihre Daten. Zum Beispiel, wenn wir mit Ihnen einen Kaufvertrag abschließen, benötigen wir im Vorfeld personenbezogene Daten.",
+        "legal_obligation": "Gesetzliche Verpflichtung (Artikel 6 Abs. 1 lit. c DSGVO): Wenn wir einer gesetzlichen Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir gesetzlich verpflichtet, Rechnungen für buchhalterische Zwecke aufzubewahren, die in der Regel personenbezogene Daten enthalten.",
+        "legitimate_interest": "Berechtigte Interessen (Artikel 6 Abs. 1 lit. f DSGVO): Im Falle berechtigter Interessen, die nicht Ihre Grundrechte überwiegen, behalten wir uns vor, personenbezogene Daten zu verarbeiten. Zum Beispiel müssen wir bestimmte Daten verarbeiten, um unsere Website sicher und effizient zu betreiben. Diese Verarbeitung ist somit ein berechtigtes Interesse.",
+        "additional_laws": "Neben der EU-Verordnung gelten auch nationale Gesetze:",
+        "austria_law": "In Österreich gilt das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (Datenschutzgesetz, DSG).",
+        "germany_law": "In Deutschland gilt das Bundesdatenschutzgesetz (BDSG).",
+        "additional_regulations": "Falls zusätzliche regionale oder nationale Gesetze Anwendung finden, werden wir Sie in den folgenden Abschnitten informieren.",
+        "contact_info_title": "Kontaktangaben des Verantwortlichen",
+        "contact_info_description": "Wenn Sie Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten haben, finden Sie nachfolgend die Kontaktdaten des Verantwortlichen gemäß Artikel 4 Abs. 7 DSGVO:",
+        "data_controller": "Christian Duus Hirtenstall 30b 25761 Büsum",
+        "contact_email": "E-Mail: kontakt@christian-duus.de",
+        "contact_phone": "Telefon: 01775353218",
+        "imprint_link": "Impressum: https://www.christian-duus.de/impressum",
+        "storage_duration_title": "Speicherdauer",
+        "storage_duration_description": "Grundsätzlich speichern wir personenbezogene Daten nur so lange, wie es für die Erbringung unserer Dienstleistungen und Produkte unbedingt erforderlich ist. Das bedeutet, dass wir personenbezogene Daten löschen, sobald der Zweck der Verarbeitung nicht mehr besteht. In einigen Fällen sind wir jedoch gesetzlich verpflichtet, bestimmte Daten auch nach Wegfall des ursprünglichen Zwecks aufzubewahren, wie zum Beispiel aus buchhalterischen Gründen.",
+        "storage_duration_request": "Wenn Sie die Löschung Ihrer Daten anfordern oder Ihre Einwilligung zur Datenverarbeitung widerrufen, werden die Daten schnellstmöglich gelöscht, sofern keine Aufbewahrungspflicht besteht.",
+        "storage_duration_more_info": "Wir stellen spezifische Informationen zur Dauer der einzelnen Datenverarbeitungen weiter unten bereit, sofern verfügbar.",
+        "data_protection_rights_title": "Rechte nach der Datenschutz-Grundverordnung",
+        "data_protection_rights_description": "Nach den Artikeln 13 und 14 DSGVO informieren wir Sie über die folgenden Rechte, die Sie haben, um eine faire und transparente Datenverarbeitung sicherzustellen:",
+        "data_protection_rights_list": {
+            "access": "Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob wir Ihre Daten verarbeiten. Wenn dies der Fall ist, haben Sie das Recht, eine Kopie der Daten und die folgenden Informationen zu erhalten:",
+            "rectification": "Sie haben das Recht, Ihre Daten zu berichtigen, wenn Sie Fehler feststellen.",
+            "erasure": "Sie haben das Recht, die Löschung Ihrer Daten zu verlangen (‘Recht auf Vergessenwerden’).",
+            "restriction": "Sie haben das Recht, die Verarbeitung einzuschränken, d.h. wir können die Daten speichern, aber nicht weiter verarbeiten.",
+            "data_portability": "Sie haben das Recht auf Datenübertragbarkeit, d.h. wir stellen Ihre Daten auf Anfrage in einem gängigen Format zur Verfügung.",
+            "objection": "Sie haben das Recht, der Datenverarbeitung zu widersprechen, was zu einer Änderung der Verarbeitungstätigkeiten führen kann.",
+            "complaint": "Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen, wenn Sie der Ansicht sind, dass die Verarbeitung personenbezogener Daten gegen die DSGVO verstößt."
+        },
+        "security_title": "Sicherheit der Datenverarbeitung",
+        "security_description": "Zum Schutz personenbezogener Daten haben wir technische und organisatorische Maßnahmen ergriffen. Soweit möglich, verschlüsseln oder pseudonymisieren wir personenbezogene Daten, um es Dritten so schwer wie möglich zu machen, personenbezogene Informationen aus unseren Daten abzuleiten.",
+        "tls_encryption_title": "TLS-Verschlüsselung mit HTTPS",
+        "tls_encryption_description": "Wir verwenden HTTPS (Hypertext Transfer Protocol Secure), um Daten sicher über das Internet zu übertragen. Dies stellt sicher, dass alle Daten, die zwischen Ihrem Browser und unserem Webserver übertragen werden, verschlüsselt sind und nicht abgefangen werden können.",
+        "conclusion_title": "Abschließende Worte",
+        "conclusion_description": "Herzlichen Glückwunsch! Wenn Sie dies lesen, haben Sie entweder unsere gesamte Datenschutzerklärung gelesen oder sind zumindest bis zu diesem Punkt gescrollt. Wie Sie sehen, nehmen wir den Schutz Ihrer personenbezogenen Daten sehr ernst. Wenn Sie Fragen zum Datenschutz auf unserer Website haben, können Sie sich gerne an uns oder die zuständige Behörde wenden. Wir hoffen, Sie bald wieder auf unserer Website begrüßen zu dürfen!"
+    }
 }
+
+

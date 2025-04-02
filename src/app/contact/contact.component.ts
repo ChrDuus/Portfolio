@@ -34,7 +34,7 @@ export class ContactComponent {
   };
 
   invalidFields: string[] = [];
-
+ showOverlay: boolean = false;
   validateForm() {
     this.invalidFields = [];
 
@@ -61,23 +61,26 @@ export class ContactComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    this.validateForm()
-    if (ngForm.submitted && this.invalidFields.length === 0 ) {
+    this.validateForm();
+    if (ngForm.submitted && this.invalidFields.length === 0) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            
+            this.showOverlay = true; 
             ngForm.resetForm();
           },
           error: (error) => {
-            console.log(error)
+            console.log(error);
           },
-          complete: () => console.info(this.contactData), 
+          complete: () => console.info(this.contactData),
         });
-    } else if (ngForm.submitted && ngForm.form.valid ) {
-
+    } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();
     }
+  }
+
+  closeOverlay() {
+    this.showOverlay = false; 
   }
   
 }
