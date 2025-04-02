@@ -48,6 +48,9 @@
             @media (max-width: 768px){
                 font-size: 64px;
             } 
+            @media(max-height: 680px){
+                display:none;
+            }
             @media (max-width: 480px){
                 font-size: 28px;
             }
@@ -170,15 +173,6 @@
         h1 {
             font-size: 48px;
         }
-
-        > h2 {
-            
-        }
-
-        > h3 {
-            
-        }
-
         > span {
             font-size: 12px;
         }

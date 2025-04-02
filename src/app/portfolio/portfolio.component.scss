@@ -19,7 +19,7 @@ section{
     .text{
         text-align: left;
         border-bottom: $mainColor 1px solid;
-        width: 80%;
+        width: 60%;
     >h2{
         @include text('Fira Code', 64px, $mainColor, 700 );
         padding-bottom: 30px;
@@ -56,15 +56,17 @@ section{
   max-width: 1440px;
 
   .projects{
+    position: relative;
     flex: 1;
     width: 60%; 
   }
    
   .project {
     border-bottom: $mainColor 1px solid;
+    position: relative;
     @include dFlex(space-between, center);
     padding: 40px 32px;
-    width: 80%;
+    width: 60%;
     height: 100px;
     transition: background-color 0.2s ease-in;
     @media(max-width: 510px){

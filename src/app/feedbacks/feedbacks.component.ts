@@ -56,21 +56,20 @@ slideRight() {
   }else{
     this.middleIndex = 0
   }
-  this.shiftCards('left');
- 
+  this.shiftCards('left'); 
 }
 
 shiftCards(direction: string) {
   const feedbackCards = document.querySelectorAll('.feedback-card');
   if (direction === 'left') {
-    this.currentOffset += 107; 
+    this.currentOffset += 100; 
   } else if (direction === 'right') {
-    this.currentOffset -= 107; 
+    this.currentOffset -= 100; 
   }
-  if(this.currentOffset > 214){
-    this.currentOffset = 214;
-  }if(this.currentOffset < -214){
-    this.currentOffset= -214
+  if(this.currentOffset > 200){
+    this.currentOffset = 200;
+  }if(this.currentOffset < -200){
+    this.currentOffset= -200
   }
   feedbackCards.forEach((card: any, index:number) => {
     let isActive:boolean = index === this.middleIndex;

@@ -30,9 +30,9 @@ section {
   .feedback-card {
     flex: 0 0 33%;
     max-width: 450px;
+    width:90%;
     height: 80%;
-    padding: 20px;
-    margin: 0 15px;
+    padding: 20px;    
     background: rgba($mainColor, 0.3);
     border-radius: 32px;
     border: 1px solid $mainColor;
@@ -55,7 +55,7 @@ section {
     }
     @media(max-width: 450px){
       height: 70%;
-      width: 80%;
+      width: 60%;
       padding: 0;
     }
     
@@ -115,6 +115,7 @@ section {
 
   > span {
     @include text("Karla", 20px, white, 400);
+    
   }
 
   .feedbackBottom {
@@ -123,6 +124,9 @@ section {
 
     > span {
       @include text("Karla", 18px, white, 400);
+      @media(max-width: 452px){
+        font-size: 16px;
+      }
     }
 
     .lineDiv {
@@ -131,22 +135,5 @@ section {
       width: 150px;
     }
   }
-
-  // @keyframes slideLeft {
-  //   0% {
-  //     transform: translateX(150%);
-  //   }
-  //   100% {
-  //     transform: translateX(0);
-  //   }
-  // }
-
-  // @keyframes slideRight {
-  //   0% {
-  //     transform: translateX(-115%);
-  //   }
-  //   100% {
-  //     transform: translateX(0);
-  //   }
-  // }
+ 
 }

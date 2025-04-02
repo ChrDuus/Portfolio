@@ -36,10 +36,13 @@ export class PortfolioComponent {
   previewPosition = { top: '0px', right: '0px' };
 
   onHover(event: MouseEvent, project: any) {  
+    if (window.innerWidth < 768) { 
+      return;
+    }
     this.activePreview = project.previewImg;
 
     const target = event.currentTarget as HTMLElement;
-    const wrapper = document.querySelector('.projectWrapper') as HTMLElement;
+    const wrapper = document.querySelector('.project') as HTMLElement;
 
     if (wrapper) {
       const targetRect = target.getBoundingClientRect();
@@ -47,7 +50,7 @@ export class PortfolioComponent {
 
       this.previewPosition = {
         top: `${targetRect.top - wrapperRect.top}px`,
-        right: `0px`
+        right: `250px`
       };
     }
   }
