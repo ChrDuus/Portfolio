@@ -3,11 +3,12 @@ import { FormControl, FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslatePipe, TranslateDirective],
+  imports: [FormsModule, CommonModule, TranslatePipe, TranslateDirective, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -35,7 +36,7 @@ export class ContactComponent {
 
   invalidFields: string[] = [];
  showOverlay: boolean = false;
- 
+
   validateForm() {
     this.invalidFields = [];
 
@@ -74,7 +75,7 @@ export class ContactComponent {
           error: (error) => {
             console.log(error);
           },
-          complete: () => console.info('Message sent'),
+          complete: () => ""
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();
