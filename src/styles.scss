@@ -43,12 +43,15 @@ button{
     background-color: transparent;
     color: white;
     font-family: Karla;
-    
-    &:hover{
+    &:disabled{
+      opacity: 0.5;
+    }
+    &:not(:disabled):hover{
         border: 2px solid $mainColor;
         color: $mainColor;
         cursor:pointer;
     }
+    
 }
 
 

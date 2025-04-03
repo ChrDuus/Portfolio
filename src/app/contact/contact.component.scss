@@ -23,7 +23,7 @@ h3 {
 .contactDiv {
   @include dFlex(center, start);
   flex-direction: column;
-  padding-left: 20px;
+  
   flex: 1;
   height: 100%;
   text-align: left; 
@@ -40,6 +40,7 @@ h3 {
   max-width: 1440px;
   gap: 10px;
   flex-wrap: wrap; 
+  padding: 0 10px 0 40px;
 }
 
 .formDiv {
