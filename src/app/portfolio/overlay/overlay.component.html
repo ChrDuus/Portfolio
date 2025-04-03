@@ -1,5 +1,6 @@
 <div class="overlay">
     <div class="contentWrapper" (click)="$event.stopPropagation()">
+      <p (click)="closeOverlay()">X</p>
       <div class="contentLeft">
         <h1>0{{ index + 1 }}</h1>
         <h2>{{ singleProject.name }}</h2>
@@ -19,7 +20,7 @@
         </div>
       </div>
       <div class="contentRight">
-        <p (click)="closeOverlay()">X</p>
+        
         <img src="../{{ singleProject.previewImg }}" alt="" />
         <button (click)="next.emit()">
           {{ 'app-overlay.nextBtn' | translate}}

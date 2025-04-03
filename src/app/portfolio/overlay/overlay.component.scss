@@ -22,12 +22,25 @@
     background: linear-gradient(to top right, $gradientStart, $gradientEnd);
     border-radius: 30px;
     padding: 40px;
+    position:relative;
 
     @media (max-width: 1024px) {
         justify-content: center;
+        align-items: center;
         flex-direction: column; 
         max-height: none;
         max-width:100%;
+    }
+    > p {
+        position: absolute;
+        right: 5%; 
+        top:5%;
+        @include text('Fira Code', 36px, white, 700);
+        cursor: pointer;
+        @media(max-width: 1024px){
+            
+        }
+       
     }
 
     .contentLeft {
@@ -36,6 +49,13 @@
         gap: 16px;
         padding: 20px;
         flex: 1;
+        @media (max-width: 1024px) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            max-height: none;
+            max-width:100%;
+        }
         @media (max-width: 768px){
             gap:12px;
         }
@@ -95,6 +115,7 @@
             > p {
                 @include text('Karla', 14px, white, 400);
                 @include dFlex(center, center);
+                gap:10px;
             }
         }
     }
@@ -102,32 +123,30 @@
 
 .buttonDiv {
     @include dFlex(center, center);
-    gap: 12px;
+    gap: 10px;
+    @media(max-width:450px){
+        width: 100%;
+       flex-direction: row;
+    }
 
     a button {
         padding: 8px 16px;
         font-size: 14px;
+        @media(max-width:450px){
+            width: 100px;
+        }
     }
 }
 
 .contentRight {
     flex: 1;
+    position:relative;
     padding: 20px;
     @include dFlex(center, center);
     flex-direction: column;
     gap: 16px;
 
-    > p {
-        position: absolute;
-        right: 20px; 
-        top: 5%;
-        @include text('Fira Code', 36px, white, 700);
-        cursor: pointer;
-        @media(max-width: 1024px){
-            right: 10%;
-        }
-       
-    }
+   
 
     > img {
         width: 100%;
@@ -189,7 +208,7 @@
     }
 
     .buttonDiv {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
 
         a button {

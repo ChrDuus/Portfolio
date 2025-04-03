@@ -66,11 +66,15 @@
                 [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'Hello Christian, I am interested in...'"
               ></textarea>
               <div class="checkboxDiv">
+                
                 <input [(ngModel)]="contactData.privacyPolicy"
                  type="checkbox" name=""
                   id="checkBox"
+                  [checked]="contactData.privacyPolicy"
+                  (change)="contactData.privacyPolicy = !contactData.privacyPolicy"
                   [class.invalid]="invalidFields.includes('checkBox')"
                   >
+               
                   <p>I've read the <a href="#imprint">privacy policy</a> and agree to the processing of my data as outlined</p>
               </div>
               <button type="submit">{{ 'app-contact.formBtn' | translate}}</button>

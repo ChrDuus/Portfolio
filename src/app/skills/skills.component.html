@@ -1,16 +1,28 @@
 <section class="skillsSection">
   <div class="contentWrapper">
-    <div class="skillSet">
-      <h3 class="overContent">{{"app-skills.h3Technologies" | translate}}</h3>
-      <div class="textDiv">
-        <h2>{{"app-skills.h2SkillSet" | translate}}</h2>
-        <span class="skillIntroduction">{{"app-skills.spanIntroduction" | translate}}</span>
-        <h3>{{"app-skills.h3youNeed" | translate}} <span>{{"app-skills.anotherSkill?" | translate}}</span></h3>
-        <span>{{"app-skills.spanFeelFree" | translate}}</span>
+    <div class="textWrapper">
+      <h3 class="overContent">{{ "app-skills.h3Technologies" | translate }}</h3>
+      <div class="skillSet">
+        <div class="textDiv">
+          <h2>{{ "app-skills.h2SkillSet" | translate }}</h2>
+          <span class="skillIntroduction">{{
+            "app-skills.spanIntroduction" | translate
+          }}</span>
+          <h3>
+            {{ "app-skills.h3youNeed" | translate }}
+            <span>{{ "app-skills.anotherSkill?" | translate }}</span>
+          </h3>
+          <span>{{ "app-skills.spanFeelFree" | translate }}</span>
+        </div>
+        <div class="buttonDiv">
+          <button>
+            <a class="talkButton" href="#contact">{{
+              "app-skills.btnLetsTalk" | translate
+            }}</a>
+          </button>
+        </div>
       </div>
-      <button><a class="talkButton" href="#contact">{{"app-skills.btnLetsTalk" | translate}}</a></button>
     </div>
-
     <div class="skillButtons">
       @for (item of imgURLS; track $index) {
       <div class="skillDiv">
@@ -19,7 +31,10 @@
 
         @if ($index == imgURLS.length - 1) {
         <div class="tooltip">
-          <span>{{"app-skills.toolTip1" | translate}}<br> {{"app-skills.toolTip2" | translate}}</span>
+          <span
+            >{{ "app-skills.toolTip1" | translate }}<br />
+            {{ "app-skills.toolTip2" | translate }}</span
+          >
           <div>
             <div>
               <img src="../../assets/img/skills/react.svg" alt="" />

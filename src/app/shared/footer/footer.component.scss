@@ -25,7 +25,7 @@ section {
     @include dFlex(center, center);
     flex-direction: column;
     text-align: center;
-
+    >a{
     > img {
         width: 120px; 
         height: auto;
@@ -36,6 +36,7 @@ section {
             filter: invert(0.6);
         }
     }
+}
 
     > span {
         @include text('Karla', 14px, white, 400); 

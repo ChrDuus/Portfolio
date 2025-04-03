@@ -69,9 +69,26 @@ h3 {
 
       > input, > textarea {
         background-color: $gradientStart;
+        color: white;
         border: none;
         width: 100%; 
         font-size: 16px;
+        font-family: "Fira Code";
+        &:focus {
+          color: white; 
+          outline: none; 
+        }
+        &:-webkit-autofill {
+          background-color: $gradientStart !important;
+          -webkit-box-shadow: 0 0 0px 1000px $gradientStart inset !important;
+          -webkit-text-fill-color: white !important;
+          font-family: "Fira Code";
+          
+        }
+      
+        &:-webkit-autofill:focus {
+          -webkit-text-fill-color: white !important;
+        }
         
       }
       input::placeholder, textarea::placeholder {
@@ -89,6 +106,29 @@ h3 {
       @include dFlex(center, center);      
       gap: 10px; 
       width: 100%;
+      label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        position: relative;
+      }
+      
+      label::after {
+        content: "✔";
+        font-size: 14px;
+        color: white;
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      input[type="checkbox"]:checked + label::after {
+        opacity: 1;
+      }
 
       >p{
         flex:1;
@@ -102,21 +142,34 @@ h3 {
         }    
       }
       input[type="checkbox"] {
-        max-width: 16px; 
+        width: 16px;
         height: 16px;
-        flex:1;
-        margin:0;
-        outline: 1px solid $mainColor;
-        appearance: none;  
+        appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
+        outline: 1px solid $mainColor;
+        background-color: $gradientStart;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: background-color 0.3s ease-in-out;
       }
-      input[type="checkbox"]:checked {
-        background-color: $mainColor; 
+      
+      input[type="checkbox"]::after {
+        content: "✔";
+        font-size: 14px;
+        color: $mainColor;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
       }
       input.invalid{
         outline: 1px solid red;
+      }
+      input[type="checkbox"]:checked::after {
+        opacity: 1;
       }
       
     }

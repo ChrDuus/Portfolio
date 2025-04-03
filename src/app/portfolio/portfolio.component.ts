@@ -36,7 +36,7 @@ export class PortfolioComponent {
   previewPosition = { top: '0px', right: '0px' };
 
   onHover(event: MouseEvent, project: any) {  
-    if (window.innerWidth < 768) { 
+    if (window.innerWidth < 1050) { 
       return;
     }
     this.activePreview = project.previewImg;

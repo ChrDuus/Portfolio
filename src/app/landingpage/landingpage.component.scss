@@ -5,9 +5,7 @@
   @include dFlex(center, center);
   flex-direction: column;
   overflow: hidden;
-  @media(min-height:1980px){
-    height: 50vh;
-  }
+  
 }
 .contentWrapper {
   @include dFlex(center, center);
@@ -146,7 +144,7 @@ p {
     align-items: center;
     gap: 56px;      
     width: max-content;
-    animation: scroll2ndText 20s linear infinite; 
+    animation: scroll2ndText 12s linear infinite; 
     
   }
 
@@ -167,20 +165,12 @@ p {
  
 
 
-  @keyframes scrollText {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-25%); 
-    }
-  }
+  
+  
   @keyframes scroll2ndText {
-    from {
-      transform: translateX(0);
-    }
+    
     to {
-      transform: translateX(-34%); 
+      transform: translateX(-33%); 
     }
   }
 

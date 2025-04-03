@@ -35,6 +35,7 @@ export class ContactComponent {
 
   invalidFields: string[] = [];
  showOverlay: boolean = false;
+ 
   validateForm() {
     this.invalidFields = [];
 
@@ -56,6 +57,7 @@ export class ContactComponent {
     if (!this.contactData.privacyPolicy) {
       this.invalidFields.push('checkBox');
       
+      
     }
    
   }
@@ -72,7 +74,7 @@ export class ContactComponent {
           error: (error) => {
             console.log(error);
           },
-          complete: () => console.info(this.contactData),
+          complete: () => console.info('Message sent'),
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();

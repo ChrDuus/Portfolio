@@ -31,9 +31,9 @@
           <span #langBtnDeMobile class="de">DE</span>
           <span #langBtnEnMobile class="en active">EN</span>
         </button>
-        <a href="#aboutMe">{{ 'app-header.menuBtnAboutMe' | translate}} </a>
-      <a href="#skills">{{ 'app-header.menuBtnSkills' | translate}} </a>
-      <a href="#projects">{{ 'app-header.menuBtnProjects' | translate}} </a>
+        <a href="#aboutMe" (click)="toggleMobileMenu()">{{ 'app-header.menuBtnAboutMe' | translate}} </a>
+      <a href="#skills" (click)="toggleMobileMenu()">{{ 'app-header.menuBtnSkills' | translate}} </a>
+      <a href="#projects" (click)="toggleMobileMenu()">{{ 'app-header.menuBtnProjects' | translate}} </a>
       </div>
     </div>
   </div>

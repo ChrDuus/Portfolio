@@ -55,7 +55,8 @@ section {
     }
     @media(max-width: 450px){
       height: 70%;
-      width: 60%;
+      width: 75%;
+      min-width: 264px;
       padding: 0;
     }
     
@@ -71,7 +72,8 @@ section {
         @include text('Karla', 128px, white, bold);
         position: absolute;
         top: -45px;
-        left: -20px;
+        left: -18px;
+        padding-left:5px;
     }
     }
   }
