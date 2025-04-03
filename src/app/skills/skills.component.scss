@@ -25,7 +25,7 @@
     width: 100%;
     max-width: 1440px;
     @include dFlex(center, center);
-    padding: 0 10px 0 40px;
+    padding: 0 40px 0 40px;
     gap: 72px;
 
     @media(max-width: 1050px) {
