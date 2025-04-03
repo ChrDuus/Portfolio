@@ -5,7 +5,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-maincontent',
   standalone: true,
@@ -15,4 +15,5 @@ import { LandingpageComponent } from '../landingpage/landingpage.component';
 })
 export class MaincontentComponent {
 
+ 
 }

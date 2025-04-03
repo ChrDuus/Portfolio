@@ -14,16 +14,18 @@ import {TranslateService} from "@ngx-translate/core";
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, HeaderComponent,
-     FooterComponent, MaincontentComponent, LandingpageComponent, TranslateModule],
+     FooterComponent, MaincontentComponent, LandingpageComponent, TranslateModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'angular-Portfolio';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,) {
    
   }
+
+ 
   toggleLanguage(language:string){
    
   }

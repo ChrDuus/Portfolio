@@ -68,10 +68,9 @@
               <div class="checkboxDiv">
                 
                 <input [(ngModel)]="contactData.privacyPolicy"
-                 type="checkbox" name=""
-                  id="checkBox"
-                  [checked]="contactData.privacyPolicy"
-                  (change)="contactData.privacyPolicy = !contactData.privacyPolicy"
+                 type="checkbox" name="privacyPolicy"
+                  #privacyPolicy = "ngModel"
+                  
                   [class.invalid]="invalidFields.includes('checkBox')"
                   >
                

@@ -40,8 +40,7 @@ section{
     }
     >h3{
         @include text('Karla', 24px, $mainColor, 400); 
-        margin-bottom: 20px;
-        margin-top: 20px;
+        padding: 20px ;
              
     }    
     >p{
@@ -105,7 +104,7 @@ section{
     }
 
     > h3 {
-        @include text('Fire Code', 24px, white, 700);
+        @include text('Fira Code', 24px, white, 700);
         line-height: 120%;
         
         flex: 1;

@@ -3,11 +3,12 @@ import { Component, ElementRef, ViewChild, Renderer2, HostListener  } from '@ang
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { AppComponent } from '../../app.component';
 import { TranslationService } from '../../services/translationservice.service'; 
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective, AppComponent],
+  imports: [CommonModule, TranslatePipe, TranslateDirective, AppComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -17,6 +18,7 @@ export class HeaderComponent {
   }
   screenWidth: number;
 mobileMenuActive:boolean = false;
+activeLanguage: string= 'en'
 
   @ViewChild('langBtnDe') langBtnDe!: ElementRef<HTMLParagraphElement>;
   @ViewChild('langBtnEn') langBtnEn!: ElementRef<HTMLParagraphElement>;
@@ -26,15 +28,13 @@ mobileMenuActive:boolean = false;
 
   toggleLanguageColor() {
     this.langBtnDe.nativeElement.classList.toggle('active'); 
-    this.langBtnEn.nativeElement.classList.toggle('active'); 
-    this.langBtnDeMobile.nativeElement.classList.toggle('active'); 
-    this.langBtnEnMobile.nativeElement.classList.toggle('active'); 
-   
+    this.langBtnEn.nativeElement.classList.toggle('active');    
   }
   
   changeLanguage() {
     const newLang = this.translationService.getCurrentLanguage() === 'en' ? 'de' : 'en';
     this.translationService.switchLanguage(newLang);
+    this.activeLanguage = this.activeLanguage === 'en' ? 'de' : 'en';
   }
 
  toggleMobileMenu() {

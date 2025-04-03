@@ -4,12 +4,17 @@
 section{
     background: linear-gradient(to right, $gradientStart, $gradientEnd);
     @include dFlex(center, center);
+    height: 100vh;
 }
 .contentWrapper{
     max-width: 1440px;
     padding: 0 40px;
     >p{
         @include text('Karla', 18px, white, 400);
+    }
+    >h1, h2, h3{
+        font-family: 'Fira Code';
+
     }
     
 }
