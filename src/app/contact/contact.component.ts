@@ -36,35 +36,43 @@ export class ContactComponent {
 
   invalidFields: string[] = [];
  showOverlay: boolean = false;
+ emailBlurred = false;
+nameBlurred = false;
+messageBlurred = false;
 
-  validateForm() {
-    this.invalidFields = [];
-
+  validateForm(field: string) {
+    this.invalidFields = this.invalidFields.filter(f => f !== field);
+    if(field === 'name'){
     if (!this.contactData.name || this.contactData.name.length < 3) {
       this.invalidFields.push('name');
       this.contactData.name = ''; 
     }
-
+  }
+    if(field === 'email'){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!this.contactData.email || !emailRegex.test(this.contactData.email)) {
       this.invalidFields.push('email');
+      this.emailBlurred = true;
       this.contactData.email = ''; 
     }
-
+  }
+  if( field === 'message'){
     if (!this.contactData.message || this.contactData.message.length < 10) {
       this.invalidFields.push('message');
       this.contactData.message = ''; 
     }
+  }if(field === 'checkbox'){
     if (!this.contactData.privacyPolicy) {
       this.invalidFields.push('checkBox');
-      
+    }
       
     }
    
   }
+  
 
   onSubmit(ngForm: NgForm) {
-    this.validateForm();
+   
     if (ngForm.submitted && this.invalidFields.length === 0) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({

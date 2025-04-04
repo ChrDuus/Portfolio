@@ -46,7 +46,7 @@ width: 50%;
 }
 }
 .overContent {  
-    padding-bottom: 20px;      
+    padding: 20px 0 20px 10px;      
     @include text('Karla', 24px, $mainColor, 700); 
     text-align: left;  
 

@@ -15,29 +15,30 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   constructor(private renderer: Renderer2, private translationService: TranslationService) {
     this.screenWidth = window.innerWidth;
+    this.activeLanguage = this.translationService.getCurrentLanguage(); // Stelle sicher, dass die aktuelle Sprache aus dem TranslationService kommt
   }
+
   screenWidth: number;
-mobileMenuActive:boolean = false;
-activeLanguage: string= 'en'
+  mobileMenuActive: boolean = false;
+  activeLanguage: string = 'en';
 
   @ViewChild('langBtnDe') langBtnDe!: ElementRef<HTMLParagraphElement>;
   @ViewChild('langBtnEn') langBtnEn!: ElementRef<HTMLParagraphElement>;
   @ViewChild('langBtnDeMobile') langBtnDeMobile!: ElementRef<HTMLParagraphElement>;
   @ViewChild('langBtnEnMobile') langBtnEnMobile!: ElementRef<HTMLParagraphElement>;
-  
 
   toggleLanguageColor() {
-    this.langBtnDe.nativeElement.classList.toggle('active'); 
-    this.langBtnEn.nativeElement.classList.toggle('active');    
+    this.langBtnDe.nativeElement.classList.toggle('active');
+    this.langBtnEn.nativeElement.classList.toggle('active');
   }
-  
+
   changeLanguage() {
     const newLang = this.translationService.getCurrentLanguage() === 'en' ? 'de' : 'en';
     this.translationService.switchLanguage(newLang);
-    this.activeLanguage = this.activeLanguage === 'en' ? 'de' : 'en';
+    this.activeLanguage = newLang; 
   }
 
- toggleMobileMenu() {
+  toggleMobileMenu() {
     this.mobileMenuActive = !this.mobileMenuActive;
 
     if (this.mobileMenuActive) {

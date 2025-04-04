@@ -34,6 +34,7 @@
                 [(ngModel)]="contactData.name"
                 type="text"
                 id="name"
+                (blur)="validateForm('name')"
                 [class.invalid]="invalidFields.includes('name')"
                 [attr.placeholder]="invalidFields.includes('name') ? 'Please enter at least 3 letters' : 'Your Name goes here'"
               />
@@ -45,11 +46,13 @@
                 #email="ngModel"
                 name="email"
                 required
+                email
                 [(ngModel)]="contactData.email"
                 type="email"
                 id="eMail"
+                (blur)="validateForm('email')"
                 [class.invalid]="invalidFields.includes('email')"
-                [attr.placeholder]="invalidFields.includes('email') ? 'Enter a valid email address' : 'Your Email'"
+                [attr.placeholder]="invalidFields.includes('email') ? 'Your Email seems invalid' : 'and your email here'"
               />
             </div>
           
@@ -62,21 +65,24 @@
                 minlength="10"
                 [(ngModel)]="contactData.message"
                 id="message"
+                (blur)="validateForm('message')"
                 [class.invalid]="invalidFields.includes('message')"
-                [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'Hello Christian, I am interested in...'"
+                [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'You need to send me a message with at least 10 characters'"
               ></textarea>
               <div class="checkboxDiv">
                 
                 <input [(ngModel)]="contactData.privacyPolicy"
                  type="checkbox" name="privacyPolicy"
                   #privacyPolicy = "ngModel"
-                  
+                  (blur)="validateForm('checkbox')"
                   [class.invalid]="invalidFields.includes('checkBox')"
                   >
                
                   <p>I've read the <a [routerLink]="'/imprint'">privacy policy</a> and agree to the processing of my data as outlined</p>
               </div>
+             
               <button type="submit" [disabled]="!contactForm.valid || !contactData.privacyPolicy">{{ 'app-contact.formBtn' | translate}}</button>
+              
             </div>  
            
           </form>
