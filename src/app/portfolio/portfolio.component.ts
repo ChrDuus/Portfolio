@@ -15,7 +15,7 @@ export class PortfolioComponent {
     { 
       name: 'Pokedex',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
+      previewImg: '../../assets/img/previews/pokedex.jpg',
       description: 'A classic Pokedex with stats, evolutions and some more. Made with PokeAPI'
     },
     { 
@@ -25,10 +25,10 @@ export class PortfolioComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
     },
     { 
-      name: 'El Pollo Loco',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
-      description: 'aber nicht heute'
+      name: 'Join',
+      technologies: ['Angular', 'TypeScript'],
+      previewImg: '../../assets/img/previews/Join.jpg',
+      description: 'Kanban porject management Tool, made with Angular'
     }
   ];
 

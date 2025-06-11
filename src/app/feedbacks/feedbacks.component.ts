@@ -13,27 +13,28 @@ export class FeedbacksComponent {
 feedbacks :{name: string; feedback: string, ref: string}[]= 
 [
 {
-  name: 'test',
-  feedback: 'doppelter test',
-  ref: 'Boss'
+  name: 'Patrick Frey',
+  feedback: 'With his open and helpful nature, Christian was a great asset to our team. He noticeably strengthened team spirit and was always a reliable source of support for any questions. He quickly grasped new concepts and applied them with dedication. What impressed me most was how calm and composed he remained even in stressful situations.',
+  ref: 'Class Member'
 },
 {
-  name: 'anderer test',
-  feedback: 'hier wird auch getestet',
-  ref: 'employee'
+  name: 'Soufiane Nouira',
+  feedback: 'Working with Chris during our group projects was a great experience, he impressed us with his exceptional logical thinking. He always had a clear overview of complex structures and delivered structured, reliable solutions even under pressure. His analytical mindset was crucial to the success of our project.',
+  ref: 'Group Member / Join'
 },
 {
-  name: 'mustermann, max',
-  feedback: 'ewige testung',
-  ref: 'putzfrau'
+  name: 'Marvin Schneemann',
+  feedback: `Working with Christian on the Join project was a great experience. A highly skilled developer, he delivers fast yet maintains code quality and maintainability. Reliable, proactive, and a strong team player, Christian is solution-oriented and always ready to help. His calm, focused attitude boosts team dynamics. With his technical talent, speed, and collaboration skills, he’s an asset to any project.
+`,
+  ref: 'Group Member / Join'
 },
-{ feedback: "Great teamwork!",
-   name: "Alice",
-    ref: "Software Engineer"
+{ feedback: "I have worked closely with Chris on two programming projects and was always impressed by his structured approach and technical expertise. He brings innovative solutions, works very reliably, and is always willing to share his knowledge with the team. Through his analytical skills and open communication, he contributed significantly to the success of our projects.",
+   name: "Mihaela Aghirculesei",
+    ref: "Group Member / Join"
    },
-{ feedback: "Very reliable.",
-   name: "Bob",
-    ref: "Project Manager"
+{ feedback: "I loved working with Chris. His thoughtful leadership shone in how he assigned tasks based on each team member’s strengths and preferences. Friendly, easy-going, and humorous, he made collaboration effective and enjoyable. His programming is logical and structured & he tackles problems step-by-step. Both technically and personally, he is a team asset. I recommend him without hesitation.",
+   name: "Ha Dao",
+    ref: "Group Member / Join"
    },
   
 ];
