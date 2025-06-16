@@ -3,4 +3,6 @@ export interface Projects {
     technologies: string [];
     previewImg: string;
     description: string;
+    link:string;
+    github:string;
 }

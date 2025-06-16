@@ -14,7 +14,9 @@ export class OverlayComponent {
     name: '',
     technologies: [],
     previewImg: '',
-    description: ''
+    description: '',
+    link: '',
+    github: ''
   };
   
   @Input() index: number = 0;
