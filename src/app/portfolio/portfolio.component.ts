@@ -25,16 +25,16 @@ export class PortfolioComponent {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       previewImg: '../../assets/img/previews/el_pollo_loco.jpg',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      link:'',
-      github:''
+      link:'/El-Pollo-Loco/',
+      github:'https://github.com/ChrDuus/El-Pollo-Loco'
     },
     { 
       name: 'Join',
       technologies: ['Angular', 'TypeScript'],
       previewImg: '../../assets/img/previews/Join.jpg',
-      description: 'Kanban porject management Tool, made with Angular',
-      link:'',
-      github:''
+      description: 'Kanban project management tool, made with Angular',
+      link:'/Join/',
+      github:'https://github.com/ChrDuus/join'
     }
   ];
 

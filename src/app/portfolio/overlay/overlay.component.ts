@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Projects } from '../../interfaces/projects';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
@@ -26,4 +26,5 @@ export class OverlayComponent {
   closeOverlay() {
     this.close.emit();
   }
+
 }
