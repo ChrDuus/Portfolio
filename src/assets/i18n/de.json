@@ -17,10 +17,10 @@
   "app-about-me": {
     "whoAmI": "Wer bin ich?",
     "aboutMe": "Über mich",
-    "aboutMeText" : "Hey there, I'm Lukas! Write some information about yourself  that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    "aboutMeBased" : "Ich lebe in Büsum an der Nordsee......",
-    "aboutMeMind" : "Show that you are open-minded. Are you enthusiastic about learningnew technologies and continually improving your skills?",
-    "aboutMeSkills" : "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration."    
+    "aboutMeText" : "Moin!, Ich bin Christian. Seit langem schon möchte ich jede Menge Code schreiben. Nun bin ich bereit dazu",
+    "aboutMeBased" : "Ich lebe in Büsum an der wilden Nordsee, wo ich bisher meinen Berufen und meinen Hobbies nachgehen konnte",
+    "aboutMeMind" : "Aktuell beschäftige ich mit den Grundlagen von React um mein Skillset weiterzuentwickelnd und anderen Technoloien kennen zu lernen",
+    "aboutMeSkills" : "Ich scheue mich nicht vor neuen Herausforderungen und bin heiß darauf, neue Dinge kennen zu lernen und mich mit ihnen auseinander zu setzen. Mein analytisches und rationales Denken hilft mir dabei auch bei Problemem stets das Große Ganze im Blick zu behalten."
     
   },
   "app-skills": {
