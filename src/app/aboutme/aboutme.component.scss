@@ -118,6 +118,7 @@
       h2 {
         @include text('Fira Code', 56px, $mainColor, 700);
         margin-bottom: 20px;
+        margin-top: 20px;
         padding-left: 10px;
         @media (max-width: 900px){
           padding: 10px 0;
