@@ -17,16 +17,16 @@
   "app-about-me": {
     "whoAmI": "Wer bin ich?",
     "aboutMe": "Über mich",
-    "aboutMeText" : "Moin!, Ich bin Christian. Seit langem schon möchte ich jede Menge Code schreiben. Nun bin ich bereit dazu",
+    "aboutMeText" : "Moin!, Ich bin Christian. Meine Begeisterung fürs Coden begleitet mich schon seit dem Ende meiner Schulzeit – daher habe ich mich früh für ein Studium der Medieninformatik entschieden. In den letzten Monaten konnte ich mich endlich voll und ganz auf die Softwareentwicklung konzentrieren und meine Leidenschaft zum Beruf machen. Es motiviert mich, mit Code kreative Lösungen zu entwickeln, Dinge zum Laufen zu bringen und mich stetig weiterzuentwickeln. Gerade im Frontend finde ich es besonders spannend, Funktionalität und Design miteinander zu verbinden.",
     "aboutMeBased" : "Ich lebe in Büsum an der wilden Nordsee, wo ich bisher meinen Berufen und meinen Hobbies nachgehen konnte",
     "aboutMeMind" : "Aktuell beschäftige ich mit den Grundlagen von React um mein Skillset weiterzuentwickelnd und anderen Technoloien kennen zu lernen",
-    "aboutMeSkills" : "Ich scheue mich nicht vor neuen Herausforderungen und bin heiß darauf, neue Dinge kennen zu lernen und mich mit ihnen auseinander zu setzen. Mein analytisches und rationales Denken hilft mir dabei auch bei Problemem stets das Große Ganze im Blick zu behalten."
+    "aboutMeSkills" : "Ich scheue mich nicht vor neuen Herausforderungen und bin heiß darauf, neue Dinge kennen zu lernen und mich mit ihnen auseinander zu setzen. Mein analytisches und rationales Denken hilft mir dabei auch bei Problemem stets das große Ganze im Blick zu behalten."
     
   },
   "app-skills": {
     "h3Technologies": "Technologies",
     "h2SkillSet": "Skill Set",
-    "spanIntroduction" : "A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it  is for you to keep up with the rapid changes in web development.",
+    "spanIntroduction" : "Ich habe umfangreiche Erfahrung mit modernen Frontend-Technologien gesammelt, insbesondere mit Angular und JavaScript, die die Grundlage all meiner bisherigen Projekte bilden. Dabei habe ich auch mit UI-Libraries wie Bootstrap und Angular Material gearbeitet, um ansprechende und funktionale Webanwendungen umzusetzen. Für mich ist es essenziell, mit den schnellen Entwicklungen im Web-Bereich Schritt zu halten – deshalb bin ich immer offen dafür, neue Tools und Technologien kennenzulernen und mich kontinuierlich weiterzuentwickeln. Mein Anspruch ist es, stets sauberen, wartbaren Code zu schreiben und moderne Best Practices in meine Arbeit zu integrieren.",
     "h3youNeed": "You need",
     "anotherSkill?": "another Skill?",
     "spanFeelFree" :"Feel free to contact me. I look forward to expanding on my previous knowledge",

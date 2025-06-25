@@ -17,15 +17,16 @@
     <a [routerLink]="''"><img class="logo" src="../../../assets/img/navBar/logo.svg" alt="" /></a>
   </div>
 
-  <div class="burgerMenu" (click)="toggleMobileMenu()">
+  <div class="burgerMenu" (click)="toggleMobileMenu(); $event.stopPropagation()">
     <div class="burgerBar"></div>
     <div class="burgerBar"></div>
     <div class="burgerBar"></div>
   </div>
   
   @if(screenWidth <= 900){
-  <div [ngClass]="['overlayBackground', mobileMenuActive ? 'active' : '']">
-    <div class="menuOverlay">
+    
+  <div #overlay [ngClass]="['overlayBackground', mobileMenuActive ? 'active' : '']">
+    <div class="menuOverlay" >
       <div class="navBarMobile">
         <button id="lang-btn" class="language-toggle" (click)="toggleLanguageColor()" (click)="changeLanguage()">
           <span #langBtnDeMobile [ngClass]="['de', activeLanguage ==='de' ? 'active' : '']">DE</span>
