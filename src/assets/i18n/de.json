@@ -27,18 +27,18 @@
     "h3Technologies": "Technologies",
     "h2SkillSet": "Skill Set",
     "spanIntroduction" : "Ich habe umfangreiche Erfahrung mit modernen Frontend-Technologien gesammelt, insbesondere mit Angular und JavaScript, die die Grundlage all meiner bisherigen Projekte bilden. Dabei habe ich auch mit UI-Libraries wie Bootstrap und Angular Material gearbeitet, um ansprechende und funktionale Webanwendungen umzusetzen. Für mich ist es essenziell, mit den schnellen Entwicklungen im Web-Bereich Schritt zu halten – deshalb bin ich immer offen dafür, neue Tools und Technologien kennenzulernen und mich kontinuierlich weiterzuentwickeln. Mein Anspruch ist es, stets sauberen, wartbaren Code zu schreiben und moderne Best Practices in meine Arbeit zu integrieren.",
-    "h3youNeed": "You need",
-    "anotherSkill?": "another Skill?",
-    "spanFeelFree" :"Feel free to contact me. I look forward to expanding on my previous knowledge",
-    "btnLetsTalk" : "Let's Talk",
-    "toolTip1": "I have special",
-    "toolTip2": "interests in learning"
+    "h3youNeed": "Du brauchst",
+    "anotherSkill?": "etwas anderes?",
+    "spanFeelFree" :"Sprich mich gerne an! Ich freue mich immer drauf, mich in neue Dinge und Aufgaben einzubringen. Und mein Wissen zu erweitern",
+    "btnLetsTalk" : "Lass uns quatschen",
+    "toolTip1": "Ich möchte gerne",
+    "toolTip2": "lernen:"
      
      
   },
   "app-portfolio": {
     "h3Portfolio": "Portfolio",
-    "h2FeaturedProjects": "Featured Projects",
+    "h2FeaturedProjects": "Bisherige Projekte",
     "pExplore": "Hier gibt's eine Auswahl meiner bisherigen Projekte"
     
         
@@ -52,20 +52,25 @@
     
   },
   "app-contact": {
-    "h3ContactMe": "Contact me",
-    "h2workTogether": "Let's work together",
-    "h3Problem": "Got a problem to solve?",
-    "spanEcourage": "EcouragePeopleto cantact you and describe what role you are intereset in. Show that you wll add value to their projects through your work",
+    "h3ContactMe": "Kontaktiere mich gerne",
+    "h2workTogether": "Lass uns zusammen arbeiten",
+    "h3Problem": "Du hast ein Problem zu lösen?",
+    "spanEcourage": "Gerne bringe ich mein bisheriges Wissen und meinen Drang, mich selbst zu verbessern, ein um deine Projekte noch besser zu machen. Ob im Team, oder Einzelarbeit, bisher habe ich noch keiner Herausforderung entsagt.",
     "spanNeedMe": "Need a Frontend Deeveloper?",
-    "pTalk": "Let's talk",
-    "formLabelName": "What's your name?",
-    "formInputPlaceholderName": "Your Name goes here",
-    "formLabelMail": "What's your email?",
-    "formInputPlaceholderMail": "Your email",
-    "formLabelMessage": "How can i help you?",
-    "formInputPlaceholderMessage": "'Hello Christian, I am interested in...'",
-    "formInputPlaceholderMessageInvalid": "'Hello Christian, I am interested in...'",
-    "formBtn": "Say Hello :)",    
+    "pTalk": "Lass und reden",
+    "formLabelName": "Wie heißt du?",
+    "formInputPlaceholderName": "Name bitte hier hin.",
+    "formInputPlaceholderNameInvalid": "Bitte gib deinen Namen ein (min. 3 Zeichen)",
+    "formLabelMail": "Wie kann ich dich erreichen?",
+    "formInputPlaceholderMail": "Deine Email",
+     "formInputPlaceholderMailInvalid": "Deine Mailadresse scheint ungültig zu sein",
+    "formLabelMessage": "Wie kann ich helfen?",
+    "formInputPlaceholderMessage": "Hallo Christian, ich würde gerne...",
+    "formInputPlaceholderMessageInvalid": "Bitte schreibe eine kurze Nachricht (min. 10 Zeichen)",
+    "formBtn": "Moin :)",    
+    "formPrivacyPolicyFront" : "Ich habe die ",
+    "formPrivacyPolicyBack": "gelesen und aktzeptiere die Verarbeitung meiner Daten wie beschrieben",
+    "formPrivacy": "Datenschutzerklärung",
     "successMessage": "Ihre Nachricht wurde erfolgreich versendet!",
     "closeButton": "Schließen"
         

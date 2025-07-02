@@ -56,10 +56,9 @@ export class HeaderComponent {
  @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     const clickedInside = this.elementRef.nativeElement.contains(event.target);
+    
     if (clickedInside && this.mobileMenuActive) {
-      setTimeout(() => {
         this.mobileMenuActive = false;
-      }, 500);      
     } 
 }
 

@@ -36,7 +36,7 @@
                 id="name"
                 (blur)="validateForm('name')"
                 [class.invalid]="invalidFields.includes('name')"
-                [attr.placeholder]="invalidFields.includes('name') ? 'Please enter at least 3 letters' : 'Your Name goes here'"
+                [attr.placeholder]="invalidFields.includes('name') ?( 'app-contact.formInputPlaceholderNameInvalid' | translate ) : ( 'app-contact.formInputPlaceholderName' | translate )"
               />
             </div>
           
@@ -52,7 +52,7 @@
                 id="eMail"
                 (blur)="validateForm('email')"
                 [class.invalid]="invalidFields.includes('email')"
-                [attr.placeholder]="invalidFields.includes('email') ? 'Your Email seems invalid' : 'and your email here'"
+                [attr.placeholder]="invalidFields.includes('email') ? ( 'app-contact.formInputPlaceholderMailInvalid' | translate ) : ( 'app-contact.formInputPlaceholderMail' | translate )"
               />
             </div>
           
@@ -67,7 +67,7 @@
                 id="message"
                 (blur)="validateForm('message')"
                 [class.invalid]="invalidFields.includes('message')"
-                [attr.placeholder]="invalidFields.includes('message') ? 'Please enter at least 10 characters' : 'You need to send me a message with at least 10 characters'"
+                [attr.placeholder]="invalidFields.includes('message') ? ( 'app-contact.formInputPlaceholderMessageInvalid' | translate ) : ( 'app-contact.formInputPlaceholderMessage' | translate )"
               ></textarea>
               <div class="checkboxDiv">
                 
@@ -78,7 +78,7 @@
                   [class.invalid]="invalidFields.includes('checkBox')"
                   >
                
-                  <p>I've read the <a [routerLink]="'/imprint'">privacy policy</a> and agree to the processing of my data as outlined</p>
+                  <p>{{ 'app-contact.formPrivacyPolicyFront' | translate }} <a [routerLink]="'/imprint'">{{ 'app-contact.formPrivacy' | translate }}</a> {{ 'app-contact.formPrivacyPolicyBack' | translate }}</p>
               </div>
              
               <button type="submit" [disabled]="!contactForm.valid || !contactData.privacyPolicy">{{ 'app-contact.formBtn' | translate}}</button>

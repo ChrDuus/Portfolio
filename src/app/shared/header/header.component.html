@@ -27,7 +27,7 @@
     
   <div #overlay [ngClass]="['overlayBackground', mobileMenuActive ? 'active' : '']">
     <div class="menuOverlay" >
-      <div class="navBarMobile">
+      <div class="navBarMobile" (click)="$event.stopPropagation()" >
         <button id="lang-btn" class="language-toggle" (click)="toggleLanguageColor()" (click)="changeLanguage()">
           <span #langBtnDeMobile [ngClass]="['de', activeLanguage ==='de' ? 'active' : '']">DE</span>
           <span #langBtnEnMobile [ngClass]="['en', activeLanguage ==='en' ? 'active' : '']">EN</span>
