@@ -9,9 +9,9 @@
     "buttonContact": "Kontaktiere mich",
     "job": "Frontend Developer",
     
-    "bannerRemote": "Available for remotework",
+    "bannerRemote": "Interessiert an Home-Office",
     "bannerFrontEnd": "Frontend Developer",
-    "bannerWork": "Open to work & learn",
+    "bannerWork": "Offen für Veränderung und Weiterentwicklung",
     "bannerBased": "Based in Buesum"
   },
   "app-about-me": {
@@ -43,7 +43,7 @@
     
         
   },
-  "app-overlay":{
+  "app-overlay":{    
     "h3About": "Worum geht's hier?",
     "nextBtn" : "Nächstes Projekt"
   },
